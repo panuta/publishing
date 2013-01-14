@@ -180,13 +180,25 @@ body, html {
 // COMPONENT ###########################################################################################################
 
 .style-page-header {
-    border-bottom: 2px solid #999;
-    color: @color_orange;
-    font-family: 'QuarkLight', sans-serif;
-    font-size: 30px;
-    font-weight: normal;
-    margin: 40px 0px 15px;
-    padding-bottom: 7px;
+    border-bottom: 1px solid #999;
+    border-top: 2px solid #999;
+    margin: 20px 0px 20px;
+    padding: 0px;
+
+    h1 {
+        background: url(../images/accounts/nav_user_settings.png) left center no-repeat;
+        display: inline-block;
+        color: #555;
+        font-size: 22px;
+        font-weight: normal;
+        line-height: normal;
+        margin: 0px;
+        padding: 15px 20px 15px 40px;
+    }
+}
+
+.style-page-header:after {
+    clear: both;
 }
 
 // ALERT ###############################################################################################################

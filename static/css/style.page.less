@@ -698,20 +698,29 @@
         width: 190px;
 
         li {
-            border-bottom: 1px solid #DDD;
             list-style: none;
-            margin-bottom: 20px;
-            padding-bottom: 7px;
-
-            a {
-                .content_link;
-                font-size: 1.2em;
-            }
+            margin-bottom: 18px;
 
             &.active {
                 a {
-                    color: @brown;
-                    font-weight: 700;
+                    background-color: @color_orange;
+                    border: 1px solid @color_orange;
+                    color: #FFF;
+                }
+            }
+
+            a {
+                border: 1px solid #DDD;
+                color: #555;
+                display: block;
+                font-size: 1.2em;
+                padding: 15px 10px;
+
+                &:hover {
+                    background-color: @color_turquoise;
+                    border: 1px solid @color_turquoise;
+                    color: #FFF;
+                    text-decoration: none;
                 }
             }
         }
