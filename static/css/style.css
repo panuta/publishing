@@ -275,7 +275,7 @@ html {
 #body-header .right .profile {
   display: inline-block;
   margin-left: 25px;
-  margin-top: 8px;
+  margin-top: 15px;
 }
 #body-header .right .profile .avatar {
   display: inline-block;
@@ -380,12 +380,13 @@ html {
   text-align: center;
 }
 .style-page-header {
-  border-bottom: 3px solid #de7350;
-  color: #444;
-  font-size: 1.5em;
-  font-weight: 700;
-  margin: 20px 0px 25px;
-  padding-bottom: 4px;
+  border-bottom: 2px solid #999;
+  color: #dd7144;
+  font-family: 'QuarkLight', sans-serif;
+  font-size: 30px;
+  font-weight: normal;
+  margin: 40px 0px 15px;
+  padding-bottom: 7px;
 }
 .alert {
   border: none;
@@ -447,13 +448,18 @@ form .avatar-controls img.avatar {
 form .avatar-controls .tools {
   margin-left: 100px;
 }
+form .avatar-controls .tools input {
+  margin-bottom: 5px;
+}
 form .avatar-controls .errorlist {
   margin-left: 100px;
   margin-top: 5px;
 }
 form.form legend {
   border: none;
-  font-size: 2.5em;
+  color: #444;
+  font-size: 24px;
+  font-weight: bold;
   line-height: normal;
   margin-bottom: 0px;
 }
@@ -480,7 +486,6 @@ form.form ul.errorlist {
 form.form .help-block {
   color: #666;
   font-size: 0.9em;
-  margin-top: 3px !important;
 }
 form.form .form-actions {
   background: none;
@@ -1393,6 +1398,9 @@ body.modal-open {
 }
 .page-my-settings .right {
   margin-left: 240px;
+}
+.page-my-settings .right form .controls textarea {
+  height: 80px;
 }
 .page-publication-view .row {
   margin-top: 30px;

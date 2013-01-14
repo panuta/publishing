@@ -46,18 +46,17 @@ $(document).ready(function() {
         <div class="logo"><a href="/">letter plant</a></div>
         <div class="right">
             {% if user.is_authenticated %}
-                <div class="navigation"><a href="#">Explore</a><a href="{% url 'view_my_library_room' %}" class="rightmost">My Rooms</a></div>
                 <div class="profile">
                     <div class="avatar"><a href="{% url 'view_my_profile' %}"><img src="{{ user.get_tiny_avatar_url }}" /></a></div>
                     <div class="name btn-group">
                         <a class="btn btn-small dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
                         <ul class="dropdown-menu pull-right">
-                            <li><a href="{% url 'view_my_library_room' %}">My Rooms</a></li>
+                            <li><a href="{% url 'view_my_dashboard' %}">Dashboard</a></li>
                             <li class="divider"></li>
-                            <li><a href="{% url 'view_my_profile' %}">My Profile</a></li>
-                            <li><a href="{% url 'edit_my_profile' %}">Settings</a></li>
+                            <li><a href="{% url 'view_my_profile' %}">โปรไฟล์ของฉัน</a></li>
+                            <li><a href="{% url 'edit_my_profile' %}">ตั้งค่าผู้ใช้</a></li>
                             <li class="divider"></li>
-                            <li><a href="{% url 'auth_logout' %}">Logout</a></li>
+                            <li><a href="{% url 'auth_logout' %}">ออกจากระบบ</a></li>
                         </ul>
                     </div>
                 </div>

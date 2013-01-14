@@ -27,7 +27,7 @@ WEBSITE_NAME = 'Publishing'
 WEBSITE_DOMAIN = 'http://127.0.0.1:8000'
 
 TIME_ZONE = 'Asia/Bangkok'
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'th'
 
 SITE_ID = 1
 USE_I18N = True
@@ -53,7 +53,7 @@ SECRET_KEY = 'THIS_IS_SECRET_KEY'
 
 AUTH_USER_MODEL = 'domain.UserAccount'
 LOGIN_URL = '/login/'
-LOGIN_REDIRECT_URL = 'view_my_library_room'
+LOGIN_REDIRECT_URL = 'view_my_dashboard'
 
 AUTHENTICATION_BACKENDS = (
     'publishing.backends.EmailAuthenticationBackend',
@@ -147,7 +147,6 @@ LOGGING = {
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 NOREPLY_EMAIL = 'noreply@localhost'
 
-"""
 # THUMBNAILS ###########################################################################################################
 
 THUMBNAIL_PRESERVE_EXTENSIONS = ('png',)
@@ -158,12 +157,8 @@ THUMBNAIL_ALIASES = {
         'avatar_small': {'size': (75, 75), 'crop': True},
         'avatar_smaller': {'size': (45, 45), 'crop': True},
         'avatar_tiny': {'size': (30, 30), 'crop': True},
-
-        'publication_cover_large': {'size': (170, 170), 'crop': True},
-        'publication_cover_normal': {'size': (140, 140), 'crop': True},
-        'publication_cover_small': {'size': (70, 70), 'crop': True},
-        },
-    }
+    },
+}
 
 # PUBLISHING SETTINGS ##################################################################################################
 
@@ -176,14 +171,6 @@ USER_AVATAR_DEFAULT_SMALL = 'avatar/default_small.png'
 USER_AVATAR_DEFAULT_SMALLER = 'avatar/default_smaller.png'
 USER_AVATAR_DEFAULT_TINY = 'avatar/default_tiny.png'
 
-# PUBLICATION
-
-PUBLICATION_COVER_ROOT = 'publications'
-
-PUBLICATION_COVER_DEFAULT_LARGE = 'publication/default_cover_large.png'
-PUBLICATION_COVER_DEFAULT_NORMAL = 'publication/default_cover_normal.png'
-PUBLICATION_COVER_DEFAULT_SMALL = 'publication/default_cover_small.png'
-"""
 
 
 try:

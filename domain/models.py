@@ -1,3 +1,5 @@
+# -*- encoding: utf-8 -*-
+
 from django.conf import settings
 from django.contrib.auth.models import BaseUserManager, AbstractBaseUser
 from django.core.urlresolvers import reverse
@@ -50,7 +52,10 @@ class UserAccount(AbstractBaseUser):
     name = models.CharField(max_length=300)
     bio = models.CharField(max_length=1000)
     avatar = ThumbnailerImageField(upload_to=user_image_dir, blank=True, null=True)
-    header_image = ThumbnailerImageField(upload_to=user_image_dir, blank=True, null=True)
+
+    website_url = models.CharField(max_length=200, blank=True, default='')
+    facebook_url = models.CharField(max_length=200, blank=True, default='')
+    twitter_url = models.CharField(max_length=200, blank=True, default='')
 
     date_joined = models.DateTimeField(default=timezone.now())
     is_active = models.BooleanField(default=True)
@@ -133,10 +138,3 @@ class UserAccount(AbstractBaseUser):
         if self.avatar:
             return get_thumbnailer(self.avatar)['avatar_tiny'].url
         return '%simages/%s' % (settings.STATIC_URL, settings.USER_AVATAR_DEFAULT_TINY)
-
-
-class UserSocialNetwork(models.Model):
-    user = models.OneToOneField('UserAccount', related_name='social')
-    website_url = models.CharField(max_length=200, blank=True, default='')
-    facebook_url = models.CharField(max_length=200, blank=True, default='')
-    twitter_url = models.CharField(max_length=200, blank=True, default='')

@@ -45,7 +45,7 @@ body, html {
         .profile {
             display: inline-block;
             margin-left: 25px;
-            margin-top: 8px;
+            margin-top: 15px;
 
             .avatar {
                 display: inline-block;
@@ -180,12 +180,13 @@ body, html {
 // COMPONENT ###########################################################################################################
 
 .style-page-header {
-    border-bottom: 3px solid @orange;
-    color: #444;
-    font-size: 1.5em;
-    font-weight: 700;
-    margin: 20px 0px 25px;
-    padding-bottom: 4px;
+    border-bottom: 2px solid #999;
+    color: @color_orange;
+    font-family: 'QuarkLight', sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    margin: 40px 0px 15px;
+    padding-bottom: 7px;
 }
 
 // ALERT ###############################################################################################################
@@ -224,22 +225,9 @@ body, html {
 
 .button-submit {
     .button_turquoise;
-
-    //background-color: @linkColor;
     border: 0;
-    //border-radius: 3px;
-    //color: #FFF;
-    //display: inline-block;
     font-size: 14px;
-    //font-size: 1.2em;
-    //font-weight: bold;
     padding: 10px 35px;
-
-    &:hover {
-        //background-color: @lighterLinkColor;
-        //color: #FFF;
-        //text-decoration: none;
-    }
 }
 
 .btn-blue {
@@ -270,6 +258,10 @@ form {
 
         .tools {
             margin-left: 100px;
+
+            input {
+                margin-bottom: 5px;
+            }
         }
 
         .errorlist {
@@ -282,7 +274,9 @@ form {
 form.form {
     legend {
         border: none;
-        font-size: 2.5em;
+        color: #444;
+        font-size: 24px;
+        font-weight: bold;
         line-height: normal;
         margin-bottom: 0px;
     }
@@ -315,7 +309,7 @@ form.form {
     .help-block {
         color: #666;
         font-size: 0.9em;
-        margin-top: 3px !important;
+        //margin-top: 3px !important;
     }
 
     .form-actions {
