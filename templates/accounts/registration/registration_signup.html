@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body_content %}
+<div class="page-registration">
+    <div class="container">
+        <form action="." method="post">
+            {% csrf_token %}
+
+            Email {{ form.email }}
+
+            <button type="submit">Sign up</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

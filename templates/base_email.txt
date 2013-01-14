@@ -1,0 +1,5 @@
+{% block email_content %}{% endblock %}
+
+---------------------------------------------------
+Readtastic | Your digital printing mill
+{{ settings.WEBSITE_DOMAIN }}

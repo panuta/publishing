@@ -1,0 +1,135 @@
+.modal-backdrop {
+    background-color: #333;
+}
+
+body.modal-open {
+    // Prevent background content to scroll when modal is opened
+    overflow: hidden;
+}
+
+.modal {
+    border: none;
+    border-radius: 0px;
+    border-top: 6px solid @orange;
+
+    .modal-header {
+        border-bottom: 0px;
+        padding: 15px 20px;
+
+        h3 {
+            color: #555;
+            font-size: 22px;
+        }
+    }
+
+    .modal-error {
+        background-color: #e56068;
+        color: #FFF;
+        margin-bottom: 15px;
+        padding: 8px 20px;
+
+        i {
+            vertical-align: -2px;
+        }
+    }
+
+    .modal-body {
+        //padding: 0px 20px 15px;
+    }
+
+    .modal-footer {
+        background-color: #FCFCFC;
+        border-top: 1px solid #EEE;
+        padding: 14px 20px 15px;
+
+        .btn {
+            font-size: 0.95em;
+        }
+
+        .btn-cancel {
+            color: #666;
+            font-size: 0.9em;
+        }
+    }
+}
+
+#modal-signup-login {
+    .modal-body {
+        padding: 0px;
+
+        .close {
+            float: right;
+            margin: 7px 11px 0px 0px;
+        }
+
+        .nav-tabs {
+            border-bottom: 1px solid @brown;
+            background-color: @brown;
+            margin: 0px;
+
+            li {
+                a {
+                    background-color: @brown;
+                    border: none;
+                    border-radius: 0;
+                    color: #EEE;
+                    font-size: 1.1em;
+                    margin-right: 0px;
+                    padding: 12px 30px 10px 30px;
+                    outline: none;
+
+                    &:hover {
+                        background-color: #CCC;
+                        color: @brown;
+                    }
+                }
+
+                &.active {
+                    a {
+                        background-color: #FFF;
+                        color: @brown;
+                    }
+                }
+            }
+        }
+
+        .tab-content {
+            padding: 25px;
+
+            .facebook {
+                text-align: center;
+            }
+
+            .or {
+                margin-top: 25px;
+                text-align: center;
+
+                hr {
+                    border: none;
+                    border-bottom: 1px solid #DDD;
+                    margin: 5px 0px;
+                }
+
+                span {
+                    background-color: #FFF;
+                    color: #777;
+
+                    display: inline-block;
+                    padding: 0 10px;
+                    position: relative;
+                    top: -16px;
+                }
+            }
+
+            .form {
+                form {
+                    label {
+                        color: #444;
+                        font-size: 0.95em;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block body_content %}
+    <div class="page-registration">
+        <div class="container">
+            <form action="." method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                <div class="control-group">
+                    <label class="control-label" for="id_name">Name</label>
+                    <div class="controls">
+                        {{ form.name }}{{ form.name.errors }}
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="id_avatar">Profile picture</label>
+                    <div class="controls">
+                        {{ form.avatar }}
+                        <p class="help-block">Maximum size of 700k. JPG, GIF, PNG.</p>
+                        {{ form.avatar.errors }}
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="id_password">Set password</label>
+                    <div class="controls">
+                        {{ form.password }}{{ form.password.errors }}
+                    </div>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
