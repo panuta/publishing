@@ -11,8 +11,8 @@ from domain.models import UserAccount
 from presentation.forms import EditProfileForm, NoAutoFillPasswordChangeForm, EmailChangeForm
 
 @login_required
-def view_my_dashboard(request):
-    return render(request, 'accounts/dashboard.html', {})
+def view_my_writeroom(request):
+    return render(request, 'accounts/writeroom.html', {})
 
 # USER PROFILE #########################################################################################################
 

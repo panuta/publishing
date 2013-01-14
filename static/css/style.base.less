@@ -1,13 +1,14 @@
 
 // Palette #############################################################################################################
 
-@linkColor: #007a8d;
+@linkColor: #3a7dbf;
 @lighterLinkColor: #0090a7;
 
 
 @color_turquoise: #45b8ac;
 @color_darker_turquoise: #379389;
 @color_orange: #dd7144;
+@color_darker_orange: #ca5524;
 
 
 @light: #f5f4f0;
@@ -23,12 +24,25 @@
 .content_link() {
     &:link, &:active, &:visited {
         color: @linkColor;
-        text-decoration: none;
+        text-decoration: underline;
     }
 
     &:hover {
-        text-decoration: underline;
+        background-color: @linkColor;
+        color: #FFF;
         text-shadow: none;
+    }
+}
+
+.nav_link() {
+    &:link, &:active, &:visited {
+        color: @color_orange;
+        text-decoration: underline;
+    }
+
+    &:hover {
+        background-color: @color_orange;
+        color: #FFF;
     }
 }
 

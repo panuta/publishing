@@ -236,8 +236,169 @@
 
 // ACCOUNTS ############################################################################################################
 
-.page-dashboard {
+.page-writeroom {
+    .style-page-header h1 {
+        background: url(../images/accounts/nav_writeroom.png) left center no-repeat;
+    }
 
+    .stats {
+        border-bottom: 1px solid #DDD;
+        margin-bottom: 20px;
+        padding: 10px 0px;
+
+        .stat {
+            border-right: 1px solid #EEE;
+            float: left;
+            margin-right: 15px;
+            padding-right: 25px;
+
+            .title {
+                color: #555;
+                font-size: 13px;
+                font-weight: bold;
+                margin: 5px 0px 7px;
+            }
+
+            .number {
+                color: #777;
+                font-size: 16px;
+
+                em {
+                    color: #444;
+                    font-size: 26px;
+                    font-weight: bold;
+                    margin-right: 4px;
+                }
+
+                a {
+                    color: #555;
+                    font-size: 14px;
+                    font-weight: bold;
+                    display: inline-block;
+                    margin-top: 3px;
+                    text-decoration: underline;
+
+                    &:hover {
+                        background-color: @linkColor;
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+    }
+
+    .block-sidebar {
+        h2 {
+            font-size: 18px;
+            line-height: normal;
+        }
+
+        .new {
+            margin-bottom: 20px;
+
+            a {
+                background-color: @color_turquoise;
+                border-radius: 3px;
+                color: #FFF;
+                display: inline-block;
+                padding: 7px 20px;
+
+                &:hover {
+                    background-color: @color_darker_turquoise;
+                    text-decoration: none;
+                }
+            }
+
+            p {
+                color: #666;
+                font-size: 13px;
+                line-height: 21px;
+                margin-top: 8px;
+            }
+        }
+
+
+    }
+
+    .block-list {
+        .types {
+            margin-bottom: 20px;
+
+            a.active {
+                background-color: @color_orange;
+                color: #FFF;
+            }
+
+            a {
+                background-color: #EEE;
+                color: #555;
+                display: inline-block;
+                font-size: 13px;
+                margin-right: 7px;
+                padding: 5px 15px;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: @color_orange;
+                    color: #FFF;
+                }
+            }
+
+            .separator {
+                color: #BBB;
+                margin: 0px 6px;
+            }
+        }
+
+        ul.publications {
+            margin: 10px 0px 0px;
+        }
+
+        li.publication {
+            list-style: none;
+
+            border-bottom: 1px dashed #DDD;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+
+            .cover {
+                float: left;
+            }
+
+            .details {
+                margin-left: 105px;
+
+                .title {
+                    font-size: 16px;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
+
+                .excerpt {
+                    color: #555;
+                    font-size: 13px;
+                }
+
+                .actions {
+                    margin-top: 10px;
+
+                    .button-writing {
+                        font-weight: bold;
+                        margin-right: 5px;
+                        padding-left: 25px;
+                        padding-right: 25px;
+                    }
+
+                    .button-more span {
+                        margin-top: 9px;
+                    }
+                }
+
+            }
+
+
+        }
+    }
 }
 
 
@@ -693,6 +854,14 @@
 }
 
 .page-my-settings {
+    .style-page-header {
+        margin-bottom: 20px;
+
+        h1 {
+            background: url(../images/accounts/nav_user_settings.png) left center no-repeat;
+        }
+    }
+
     .left {
         float: left;
         width: 190px;
@@ -710,15 +879,15 @@
             }
 
             a {
-                border: 1px solid #DDD;
+                background-color: #EEE;
                 color: #555;
                 display: block;
                 font-size: 1.2em;
                 padding: 15px 10px;
 
                 &:hover {
-                    background-color: @color_turquoise;
-                    border: 1px solid @color_turquoise;
+                    background-color: @color_orange;
+                    border: 1px solid @color_orange;
                     color: #FFF;
                     text-decoration: none;
                 }

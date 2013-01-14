@@ -5,7 +5,7 @@ urlpatterns = patterns('presentation.views.views',
 )
 
 urlpatterns += patterns('presentation.views.user_views',
-    url(r'^dashboard/$', 'view_my_dashboard', name='view_my_dashboard'),
+    url(r'^writeroom/$', 'view_my_writeroom', name='view_my_writeroom'),
 
     url(r'^profile/id/(?P<user_uid>\w+)/$', 'view_user_profile_by_id', name='view_user_profile_by_id'),
     url(r'^profile/(?P<url_name>\w+)/$', 'view_user_profile_by_url_name', name='view_user_profile_by_url_name'),

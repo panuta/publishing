@@ -355,7 +355,7 @@ html {
   text-decoration: underline;
 }
 #body-footer .links a:hover {
-  background-color: #45b8ac;
+  background-color: #3a7dbf;
   color: #FFF;
 }
 #body-footer .links .separator {
@@ -380,13 +380,12 @@ html {
   text-align: center;
 }
 .style-page-header {
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid #DDD;
   border-top: 2px solid #999;
-  margin: 20px 0px 20px;
+  margin: 20px 0px 0px;
   padding: 0px;
 }
 .style-page-header h1 {
-  background: url(../images/accounts/nav_user_settings.png) left center no-repeat;
   display: inline-block;
   color: #555;
   font-size: 22px;
@@ -510,11 +509,12 @@ form.form .form-actions a {
 form.form .form-actions a.link:link,
 form.form .form-actions a.link:active,
 form.form .form-actions a.link:visited {
-  color: #007a8d;
-  text-decoration: none;
+  color: #3a7dbf;
+  text-decoration: underline;
 }
 form.form .form-actions a.link:hover {
-  text-decoration: underline;
+  background-color: #3a7dbf;
+  color: #FFF;
   text-shadow: none;
 }
 form.form .form-actions a.danger {
@@ -616,11 +616,12 @@ form.form .form-actions a.danger:hover {
 .style-publication .publication-head .title a:link,
 .style-publication .publication-head .title a:active,
 .style-publication .publication-head .title a:visited {
-  color: #007a8d;
-  text-decoration: none;
+  color: #3a7dbf;
+  text-decoration: underline;
 }
 .style-publication .publication-head .title a:hover {
-  text-decoration: underline;
+  background-color: #3a7dbf;
+  color: #FFF;
   text-shadow: none;
 }
 .style-publication .publication-body {
@@ -916,7 +917,7 @@ body.modal-open {
   margin-top: 15px;
 }
 .page-homepage .introduction .text .actions a {
-  background-color: #007a8d;
+  background-color: #3a7dbf;
   border-radius: 3px;
   color: #FFF;
   display: inline-block;
@@ -971,11 +972,12 @@ body.modal-open {
 .page-homepage .contributors li .name a:link,
 .page-homepage .contributors li .name a:active,
 .page-homepage .contributors li .name a:visited {
-  color: #007a8d;
-  text-decoration: none;
+  color: #3a7dbf;
+  text-decoration: underline;
 }
 .page-homepage .contributors li .name a:hover {
-  text-decoration: underline;
+  background-color: #3a7dbf;
+  color: #FFF;
   text-shadow: none;
 }
 .page-homepage .contributors li .quote {
@@ -997,11 +999,12 @@ body.modal-open {
 .page-homepage .contributors li .links a:link,
 .page-homepage .contributors li .links a:active,
 .page-homepage .contributors li .links a:visited {
-  color: #007a8d;
-  text-decoration: none;
+  color: #3a7dbf;
+  text-decoration: underline;
 }
 .page-homepage .contributors li .links a:hover {
-  text-decoration: underline;
+  background-color: #3a7dbf;
+  color: #FFF;
   text-shadow: none;
 }
 .page-homepage .contributors li.person-right {
@@ -1023,6 +1026,132 @@ body.modal-open {
 }
 .page-homepage .publications .right-publication {
   margin: 30px 0px 20px 0px;
+}
+.page-writeroom .style-page-header h1 {
+  background: url(../images/accounts/nav_writeroom.png) left center no-repeat;
+}
+.page-writeroom .stats {
+  border-bottom: 1px solid #DDD;
+  margin-bottom: 20px;
+  padding: 10px 0px;
+}
+.page-writeroom .stats .stat {
+  border-right: 1px solid #EEE;
+  float: left;
+  margin-right: 15px;
+  padding-right: 25px;
+}
+.page-writeroom .stats .stat .title {
+  color: #555;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 5px 0px 7px;
+}
+.page-writeroom .stats .stat .number {
+  color: #777;
+  font-size: 16px;
+}
+.page-writeroom .stats .stat .number em {
+  color: #444;
+  font-size: 26px;
+  font-weight: bold;
+  margin-right: 4px;
+}
+.page-writeroom .stats .stat .number a {
+  color: #555;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 3px;
+  text-decoration: underline;
+}
+.page-writeroom .stats .stat .number a:hover {
+  background-color: #3a7dbf;
+  color: #FFF;
+}
+.page-writeroom .block-sidebar h2 {
+  font-size: 18px;
+  line-height: normal;
+}
+.page-writeroom .block-sidebar .new {
+  margin-bottom: 20px;
+}
+.page-writeroom .block-sidebar .new a {
+  background-color: #45b8ac;
+  border-radius: 3px;
+  color: #FFF;
+  display: inline-block;
+  padding: 7px 20px;
+}
+.page-writeroom .block-sidebar .new a:hover {
+  background-color: #379389;
+  text-decoration: none;
+}
+.page-writeroom .block-sidebar .new p {
+  color: #666;
+  font-size: 13px;
+  line-height: 21px;
+  margin-top: 8px;
+}
+.page-writeroom .block-list .types {
+  margin-bottom: 20px;
+}
+.page-writeroom .block-list .types a.active {
+  background-color: #dd7144;
+  color: #FFF;
+}
+.page-writeroom .block-list .types a {
+  background-color: #EEE;
+  color: #555;
+  display: inline-block;
+  font-size: 13px;
+  margin-right: 7px;
+  padding: 5px 15px;
+  text-decoration: none;
+}
+.page-writeroom .block-list .types a:hover {
+  background-color: #dd7144;
+  color: #FFF;
+}
+.page-writeroom .block-list .types .separator {
+  color: #BBB;
+  margin: 0px 6px;
+}
+.page-writeroom .block-list ul.publications {
+  margin: 10px 0px 0px;
+}
+.page-writeroom .block-list li.publication {
+  list-style: none;
+  border-bottom: 1px dashed #DDD;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.page-writeroom .block-list li.publication .cover {
+  float: left;
+}
+.page-writeroom .block-list li.publication .details {
+  margin-left: 105px;
+}
+.page-writeroom .block-list li.publication .details .title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.page-writeroom .block-list li.publication .details .excerpt {
+  color: #555;
+  font-size: 13px;
+}
+.page-writeroom .block-list li.publication .details .actions {
+  margin-top: 10px;
+}
+.page-writeroom .block-list li.publication .details .actions .button-writing {
+  font-weight: bold;
+  margin-right: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.page-writeroom .block-list li.publication .details .actions .button-more span {
+  margin-top: 9px;
 }
 .page-room .row {
   margin-top: 30px;
@@ -1333,11 +1462,12 @@ body.modal-open {
 .page-profile .header .website a:link,
 .page-profile .header .website a:active,
 .page-profile .header .website a:visited {
-  color: #007a8d;
-  text-decoration: none;
+  color: #3a7dbf;
+  text-decoration: underline;
 }
 .page-profile .header .website a:hover {
-  text-decoration: underline;
+  background-color: #3a7dbf;
+  color: #FFF;
   text-shadow: none;
 }
 .page-profile .header .networks {
@@ -1379,6 +1509,12 @@ body.modal-open {
 .page-profile .publications .right-publication {
   margin: 0px 0px 30px 0px;
 }
+.page-my-settings .style-page-header {
+  margin-bottom: 20px;
+}
+.page-my-settings .style-page-header h1 {
+  background: url(../images/accounts/nav_user_settings.png) left center no-repeat;
+}
 .page-my-settings .left {
   float: left;
   width: 190px;
@@ -1393,15 +1529,15 @@ body.modal-open {
   color: #FFF;
 }
 .page-my-settings .left li a {
-  border: 1px solid #DDD;
+  background-color: #EEE;
   color: #555;
   display: block;
   font-size: 1.2em;
   padding: 15px 10px;
 }
 .page-my-settings .left li a:hover {
-  background-color: #45b8ac;
-  border: 1px solid #45b8ac;
+  background-color: #dd7144;
+  border: 1px solid #dd7144;
   color: #FFF;
   text-decoration: none;
 }
@@ -1506,11 +1642,12 @@ body.modal-open {
 .page-publication-view .publication .publication-actions a.link:link,
 .page-publication-view .publication .publication-actions a.link:active,
 .page-publication-view .publication .publication-actions a.link:visited {
-  color: #007a8d;
-  text-decoration: none;
+  color: #3a7dbf;
+  text-decoration: underline;
 }
 .page-publication-view .publication .publication-actions a.link:hover {
-  text-decoration: underline;
+  background-color: #3a7dbf;
+  color: #FFF;
   text-shadow: none;
 }
 .page-publication-view .publication .publication-actions .btn {
@@ -1555,11 +1692,12 @@ body.modal-open {
 .page-publication-view .publication .publication-actions .not-login a:link,
 .page-publication-view .publication .publication-actions .not-login a:active,
 .page-publication-view .publication .publication-actions .not-login a:visited {
-  color: #007a8d;
-  text-decoration: none;
+  color: #3a7dbf;
+  text-decoration: underline;
 }
 .page-publication-view .publication .publication-actions .not-login a:hover {
-  text-decoration: underline;
+  background-color: #3a7dbf;
+  color: #FFF;
   text-shadow: none;
 }
 .page-publication-view .publication .publication-social {
@@ -1658,11 +1796,12 @@ body.modal-open {
 .page-publication-view .excerpt .excerpt-box .content p a:link,
 .page-publication-view .excerpt .excerpt-box .content p a:active,
 .page-publication-view .excerpt .excerpt-box .content p a:visited {
-  color: #007a8d;
-  text-decoration: none;
+  color: #3a7dbf;
+  text-decoration: underline;
 }
 .page-publication-view .excerpt .excerpt-box .content p a:hover {
-  text-decoration: underline;
+  background-color: #3a7dbf;
+  color: #FFF;
   text-shadow: none;
 }
 .page-publication-view .excerpt .excerpt-box .continue {
@@ -1707,8 +1846,8 @@ body.modal-open {
   width: 150px;
 }
 .page-publication-read .library a:hover {
-  background-color: #007a8d;
-  border: 1px solid #007a8d;
+  background-color: #3a7dbf;
+  border: 1px solid #3a7dbf;
   border-bottom: none;
   color: #FFF;
   text-decoration: none;
@@ -1745,11 +1884,12 @@ body.modal-open {
 .page-publication-read .publication .author .name a:link,
 .page-publication-read .publication .author .name a:active,
 .page-publication-read .publication .author .name a:visited {
-  color: #007a8d;
-  text-decoration: none;
+  color: #3a7dbf;
+  text-decoration: underline;
 }
 .page-publication-read .publication .author .name a:hover {
-  text-decoration: underline;
+  background-color: #3a7dbf;
+  color: #FFF;
   text-shadow: none;
 }
 .page-publication-read .publication .content {
@@ -1775,11 +1915,12 @@ body.modal-open {
 .page-publication-read .publication .content p a:link,
 .page-publication-read .publication .content p a:active,
 .page-publication-read .publication .content p a:visited {
-  color: #007a8d;
-  text-decoration: none;
+  color: #3a7dbf;
+  text-decoration: underline;
 }
 .page-publication-read .publication .content p a:hover {
-  text-decoration: underline;
+  background-color: #3a7dbf;
+  color: #FFF;
   text-shadow: none;
 }
 .page-publication-read .publication .content .image-full {
@@ -1881,8 +2022,8 @@ body.modal-open {
   width: 150px;
 }
 .page-publication-read .back a:hover {
-  background-color: #007a8d;
-  border: 1px solid #007a8d;
+  background-color: #3a7dbf;
+  border: 1px solid #3a7dbf;
   color: #FFF;
   text-decoration: none;
 }
@@ -1905,8 +2046,8 @@ body.modal-open {
   width: 180px;
 }
 .page-publication-write .goback a:hover {
-  background-color: #007a8d;
-  border: 1px solid #007a8d;
+  background-color: #3a7dbf;
+  border: 1px solid #3a7dbf;
   border-bottom: none;
   color: #FFF;
   text-decoration: none;
@@ -1943,11 +2084,12 @@ body.modal-open {
 .page-publication-write .publication .author .name a:link,
 .page-publication-write .publication .author .name a:active,
 .page-publication-write .publication .author .name a:visited {
-  color: #007a8d;
-  text-decoration: none;
+  color: #3a7dbf;
+  text-decoration: underline;
 }
 .page-publication-write .publication .author .name a:hover {
-  text-decoration: underline;
+  background-color: #3a7dbf;
+  color: #FFF;
   text-shadow: none;
 }
 .page-publication-write .publication .content {
@@ -1973,11 +2115,12 @@ body.modal-open {
 .page-publication-write .publication .content p a:link,
 .page-publication-write .publication .content p a:active,
 .page-publication-write .publication .content p a:visited {
-  color: #007a8d;
-  text-decoration: none;
+  color: #3a7dbf;
+  text-decoration: underline;
 }
 .page-publication-write .publication .content p a:hover {
-  text-decoration: underline;
+  background-color: #3a7dbf;
+  color: #FFF;
   text-shadow: none;
 }
 .page-publication-write .publication .content .image-full {
