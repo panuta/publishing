@@ -71,8 +71,14 @@ $(document).ready(function() {
 
 <div id="body-footer">
     <div class="container">
-        <div class="website">letter plant</div>
-        <div class="is">status : developing</div>
+        <div class="social">
+            <a href="http://www.facebook.com" class="facebook">Facebook Page</a>
+            <a href="http://www.twitter.com" class="twitter">Twitter</a>
+        </div>
+        <div class="links">
+            <a href="#">Home</a><span class="separator">|</span><a href="#">About Us</a><span class="separator">|</span><a href="#">Our Policy</a>
+        </div>
+        <div class="copyright">© 2012 letterprint</div>
     </div>
 </div>
 
@@ -89,64 +95,60 @@ $(document).ready(function() {
                 <div class="or">
                     <hr><span>หรือ</span>
                 </div>
-                <div class="form">
-                    <form method="post" action="{% url 'view_signup' %}" class="form-horizontal">
-                        {% csrf_token %}
-                        <div class="control-group">
-                            <label class="control-label" for="id_signup_modal_name">ชื่อหรือนามปากกา</label>
-                            <div class="controls">
-                                <input type="text" name="name" id="id_signup_modal_name"/>
-                            </div>
+                <form method="post" action="{% url 'view_signup' %}" class="form">
+                    {% csrf_token %}
+                    <div class="control-group">
+                        <label class="control-label" for="id_signup_modal_name">ชื่อหรือนามปากกา</label>
+                        <div class="controls">
+                            <input type="text" name="name" id="id_signup_modal_name"/>
                         </div>
-                        <div class="control-group">
-                            <label class="control-label" for="id_signup_modal_email">อีเมล</label>
-                            <div class="controls">
-                                <input type="email" name="email" id="id_signup_modal_email"/>
-                            </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="id_signup_modal_email">อีเมล</label>
+                        <div class="controls">
+                            <input type="email" name="email" id="id_signup_modal_email"/>
                         </div>
-                        <div class="control-group">
-                            <label class="control-label" for="id_signup_modal_password">รหัสผ่าน</label>
-                            <div class="controls">
-                                <input type="password" name="password" id="id_signup_modal_password"/>
-                            </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="id_signup_modal_password">รหัสผ่าน</label>
+                        <div class="controls">
+                            <input type="password" name="password" id="id_signup_modal_password"/>
                         </div>
+                    </div>
 
-                        <div class="control-group">
-                            <div class="controls">
-                                <button type="submit" class="button-submit">สมัครสมาชิก</button>
-                            </div>
+                    <div class="control-group">
+                        <div class="controls">
+                            <button type="submit" class="button-submit">สมัครสมาชิก</button>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
             <div class="tab-pane" id="modal-tab-login">
                 <div class="facebook"><a href="#"><img src="{{ STATIC_URL }}images/accounts/facebook-login.png" alt="Connect with Facebook" /></a></div>
                 <div class="or">
                     <hr><span>หรือ</span>
                 </div>
-                <div class="form">
-                    <form method="post" action="{% url 'view_login' %}" class="form-horizontal">
-                        {% csrf_token %}
-                        <div class="control-group">
-                            <label class="control-label" for="id_login_modal_email">อีเมล</label>
-                            <div class="controls">
-                                <input type="email" name="email" id="id_login_modal_email"/>
-                            </div>
+                <form method="post" action="{% url 'view_login' %}" class="form">
+                    {% csrf_token %}
+                    <div class="control-group">
+                        <label class="control-label" for="id_login_modal_email">อีเมล</label>
+                        <div class="controls">
+                            <input type="email" name="email" id="id_login_modal_email"/>
                         </div>
-                        <div class="control-group">
-                            <label class="control-label" for="id_login_modal_password">รหัสผ่าน</label>
-                            <div class="controls">
-                                <input type="password" name="password" id="id_login_modal_password">
-                            </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="id_login_modal_password">รหัสผ่าน</label>
+                        <div class="controls">
+                            <input type="password" name="password" id="id_login_modal_password">
                         </div>
+                    </div>
 
-                        <div class="control-group">
-                            <div class="controls">
-                                <button type="submit" class="button-submit">เข้าสู่ระบบ</button>
-                            </div>
+                    <div class="control-group">
+                        <div class="controls">
+                            <button type="submit" class="button-submit">เข้าสู่ระบบ</button>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

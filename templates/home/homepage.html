@@ -4,7 +4,9 @@
 {% block html_head %}
 <script type="text/javascript">
 $(document).ready(function() {
-
+$('.signup_box a.signup').on('click', function (e) {
+    _switch_signup_login_modal('signup');
+});
 });
 </script>
 {% endblock %}
@@ -12,8 +14,36 @@ $(document).ready(function() {
 {% block body_content %}
 <div class="page-homepage">
     <div class="container">
+        <div class="tagline">
+            <h1>publish your works in a new fashioned way</h1>
+        </div>
 
+        <div class="features">
+            <h2>we understand your worry</h2>
+            <ul class="clearfix">
+                <li class="hosting">
+                    <h3>Hosting, Payment, & Delivery</h3>
+                    <p>เราจัดการกับเรื่องเทคนิคน่าปวดหัวในการอัพโหลดไฟล์ การจ่ายเงิน และการดาวน์โหลดไฟล์ให้คุณได้หมดความกังวลใจ</p>
+                </li>
+                <li class="share">
+                    <h3>Share on Your Websites</h3>
+                    <p>อยากแชร์งานเขียนของคุณไปยังเว็บไซต์ของคุณเอง หรือเว็บไซต์ Social Networks ต่างๆ ก็สามารถทำได้อย่างง่ายดาย</p>
+                </li>
+                <li class="writing">
+                    <h3>Professional Writing Tools</h3>
+                    <p>เราเตรียมเครื่องมือที่จะช่วยให้คุณเขียนงานและจัดรูปเล่มได้สวยงามเหมือนมืออาชีพ ที่ใครๆ ก็สามารถเริ่มเป็นนักเขียนได้</p>
+                </li>
+                <li class="love">
+                    <h3>Focus What You Love</h3>
+                    <p>อย่าเสียเวลาไปกับเรื่องยุ่งยากที่คุณไม่ถนัด เรามุ่งมั่นที่จะทำให้คุณได้ทุ่มเทแรงไปกับงานเขียนที่คุณรักอย่างได้เต็มที่</p>
+                </li>
+            </ul>
+        </div>
 
+        <div class="signup_box">
+            <h2>stop your worry and start your writing now</h2>
+            <div><a href="#modal-signup-login" class="signup" data-toggle="modal">สมัครสมาชิก</a></div>
+        </div>
     </div>
 </div>
 {% endblock %}

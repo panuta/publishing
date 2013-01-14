@@ -2,7 +2,7 @@
 @import "style.font.less";
 
 body, html {
-    background-color: @light;
+    background-color: #FFF;
 }
 
 #body-header {
@@ -12,13 +12,13 @@ body, html {
         float: left;
 
         a {
-            background: url(../images/logo.png) no-repeat;
+            background: url(../images/ui/logo.png) no-repeat;
             color: @brown;
             display: block;
-            height: 35px;
-            margin-top: 15px;
+            height: 38px;
+            margin-top: 20px;
             text-indent: -9999px;
-            width: 179px;
+            width: 190px;
         }
     }
 
@@ -71,7 +71,7 @@ body, html {
         }
 
         .account {
-            padding-top: 14px;
+            padding-top: 24px;
 
             a {
                 color: #444;
@@ -100,11 +100,66 @@ body, html {
 }
 
 #body-footer {
-    margin-top: 30px;
+    margin-top: 60px;
 
     .container {
         border-top: 1px solid #DDD;
-        padding: 10px 0px 20px;
+    }
+
+    .social {
+        padding-top: 15px;
+        text-align: center;
+
+        a {
+            background: url(../images/ui/social-icons.png) no-repeat;
+            display: inline-block;
+            height: 32px;
+            margin: 0px 10px;
+            text-indent: -9999px;
+            width: 32px;
+
+            &.facebook {
+                background-position: 0px 0px;
+
+                &:hover {
+                    background-position: 0px -32px;
+                }
+            }
+
+            &.twitter {
+                background-position: -32px 0px;
+
+                &:hover {
+                    background-position: -32px -32px;
+                }
+            }
+        }
+    }
+
+    .links {
+        padding-top: 15px;
+        text-align: center;
+
+        a {
+            color: #555;
+            text-decoration: underline;
+
+            &:hover {
+                background-color: @color_turquoise;
+                color: #FFF;
+            }
+        }
+
+        .separator {
+            color: #BBB;
+            margin: 0px 8px;
+        }
+    }
+
+    .copyright {
+        color: #999;
+        padding: 15px 0px;
+        text-align: center;
     }
 
     .website {
@@ -168,19 +223,22 @@ body, html {
 // BUTTON ##############################################################################################################
 
 .button-submit {
-    background-color: @linkColor;
+    .button_turquoise;
+
+    //background-color: @linkColor;
     border: 0;
-    border-radius: 3px;
-    color: #FFF;
-    display: inline-block;
-    font-size: 1.2em;
-    font-weight: bold;
+    //border-radius: 3px;
+    //color: #FFF;
+    //display: inline-block;
+    font-size: 14px;
+    //font-size: 1.2em;
+    //font-weight: bold;
     padding: 10px 35px;
 
     &:hover {
-        background-color: @lighterLinkColor;
-        color: #FFF;
-        text-decoration: none;
+        //background-color: @lighterLinkColor;
+        //color: #FFF;
+        //text-decoration: none;
     }
 }
 

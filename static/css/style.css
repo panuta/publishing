@@ -69,6 +69,20 @@ input[type="color"]:focus,
   margin: 7px 1px;
 }
 @font-face {
+  font-family: 'QuarkBold';
+  src: url('../fonts/quark/quark-bold-webfont.eot');
+  src: url('../fonts/quark/quark-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/quark/quark-bold-webfont.woff') format('woff'), url('../fonts/quark/quark-bold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'QuarkLight';
+  src: url('../fonts/quark/quark-light-webfont.eot');
+  src: url('../fonts/quark/quark-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/quark/quark-light-webfont.woff') format('woff'), url('../fonts/quark/quark-light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: 'OpenSansLight';
   src: url('../fonts/opensans/OpenSans-Light-webfont.eot');
   src: url('../fonts/opensans/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans/OpenSans-Light-webfont.woff') format('woff'), url('../fonts/opensans/OpenSans-Light-webfont.ttf') format('truetype'), url('../fonts/opensans/OpenSans-Light-webfont.svg#OpenSansLight') format('svg');
@@ -224,7 +238,7 @@ input[type="color"]:focus,
 }
 body,
 html {
-  background-color: #f5f4f0;
+  background-color: #FFF;
 }
 #body-header {
   height: 60px;
@@ -233,13 +247,13 @@ html {
   float: left;
 }
 #body-header .logo a {
-  background: url(../images/logo.png) no-repeat;
+  background: url(../images/ui/logo.png) no-repeat;
   color: #5b5353;
   display: block;
-  height: 35px;
-  margin-top: 15px;
+  height: 38px;
+  margin-top: 20px;
   text-indent: -9999px;
-  width: 179px;
+  width: 190px;
 }
 #body-header .right {
   float: right;
@@ -283,7 +297,7 @@ html {
   vertical-align: middle;
 }
 #body-header .right .account {
-  padding-top: 14px;
+  padding-top: 24px;
 }
 #body-header .right .account a {
   color: #444;
@@ -303,11 +317,55 @@ html {
   border-bottom-color: white;
 }
 #body-footer {
-  margin-top: 30px;
+  margin-top: 60px;
 }
 #body-footer .container {
   border-top: 1px solid #DDD;
-  padding: 10px 0px 20px;
+}
+#body-footer .social {
+  padding-top: 15px;
+  text-align: center;
+}
+#body-footer .social a {
+  background: url(../images/ui/social-icons.png) no-repeat;
+  display: inline-block;
+  height: 32px;
+  margin: 0px 10px;
+  text-indent: -9999px;
+  width: 32px;
+}
+#body-footer .social a.facebook {
+  background-position: 0px 0px;
+}
+#body-footer .social a.facebook:hover {
+  background-position: 0px -32px;
+}
+#body-footer .social a.twitter {
+  background-position: -32px 0px;
+}
+#body-footer .social a.twitter:hover {
+  background-position: -32px -32px;
+}
+#body-footer .links {
+  padding-top: 15px;
+  text-align: center;
+}
+#body-footer .links a {
+  color: #555;
+  text-decoration: underline;
+}
+#body-footer .links a:hover {
+  background-color: #45b8ac;
+  color: #FFF;
+}
+#body-footer .links .separator {
+  color: #BBB;
+  margin: 0px 8px;
+}
+#body-footer .copyright {
+  color: #999;
+  padding: 15px 0px;
+  text-align: center;
 }
 #body-footer .website {
   color: #5b5353;
@@ -354,18 +412,16 @@ html {
   background: url(../images/alert/messages.png) #cc3300 18px -109px no-repeat;
 }
 .button-submit {
-  background-color: #007a8d;
-  border: 0;
+  background-color: #45b8ac;
   border-radius: 3px;
   color: #FFF;
   display: inline-block;
-  font-size: 1.2em;
-  font-weight: bold;
+  border: 0;
+  font-size: 14px;
   padding: 10px 35px;
 }
 .button-submit:hover {
-  background-color: #0090a7;
-  color: #FFF;
+  background-color: #379389;
   text-decoration: none;
 }
 .btn-blue {
@@ -640,9 +696,8 @@ body.modal-open {
   overflow: hidden;
 }
 .modal {
-  border: none;
+  border: 10px solid #45b8ac;
   border-radius: 0px;
-  border-top: 6px solid #de7350;
 }
 .modal .modal-header {
   border-bottom: 0px;
@@ -678,39 +733,38 @@ body.modal-open {
 }
 #modal-signup-login .modal-body .close {
   float: right;
-  margin: 7px 11px 0px 0px;
+  margin: 5px 11px 0px 0px;
 }
 #modal-signup-login .modal-body .nav-tabs {
-  border-bottom: 1px solid #5b5353;
-  background-color: #5b5353;
+  border-bottom: 1px solid #45b8ac;
+  background-color: #45b8ac;
   margin: 0px;
 }
 #modal-signup-login .modal-body .nav-tabs li a {
-  background-color: #5b5353;
+  background-color: #45b8ac;
   border: none;
   border-radius: 0;
-  color: #EEE;
+  color: #FFF;
   font-size: 1.1em;
   margin-right: 0px;
   padding: 12px 30px 10px 30px;
   outline: none;
 }
 #modal-signup-login .modal-body .nav-tabs li a:hover {
-  background-color: #CCC;
-  color: #5b5353;
+  background-color: #379389;
 }
 #modal-signup-login .modal-body .nav-tabs li.active a {
   background-color: #FFF;
-  color: #5b5353;
+  color: #45b8ac;
 }
 #modal-signup-login .modal-body .tab-content {
-  padding: 25px;
+  padding: 20px;
 }
 #modal-signup-login .modal-body .tab-content .facebook {
   text-align: center;
 }
 #modal-signup-login .modal-body .tab-content .or {
-  margin-top: 25px;
+  margin-top: 20px;
   text-align: center;
 }
 #modal-signup-login .modal-body .tab-content .or hr {
@@ -721,15 +775,105 @@ body.modal-open {
 #modal-signup-login .modal-body .tab-content .or span {
   background-color: #FFF;
   color: #777;
+  font-size: 12px;
   display: inline-block;
   padding: 0 10px;
   position: relative;
-  top: -16px;
+  top: -18px;
 }
-#modal-signup-login .modal-body .tab-content .form form label {
-  color: #444;
+#modal-signup-login .modal-body .tab-content form {
+  margin: 0px;
+}
+#modal-signup-login .modal-body .tab-content form .control-group {
+  margin-bottom: 0px;
+  text-align: center;
+}
+#modal-signup-login .modal-body .tab-content form .control-group label {
+  color: #666;
   font-size: 0.95em;
+  font-weight: normal;
+}
+#modal-signup-login .modal-body .tab-content form .control-group input {
+  width: 250px;
+}
+.page-homepage .tagline h1 {
+  color: #dd7144;
+  font-family: 'QuarkLight', sans-serif;
+  font-size: 42px;
+  font-weight: normal;
+  margin-top: 80px;
+  text-align: center;
+}
+.page-homepage .features {
+  margin-top: 30px;
+}
+.page-homepage .features h2 {
+  color: #666;
+  font-family: 'QuarkLight', sans-serif;
+  font-size: 32px;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0px 0px 30px;
+  text-align: center;
+}
+.page-homepage .features ul {
+  margin: 0px;
+}
+.page-homepage .features li {
+  float: left;
+  list-style: none;
+  padding-top: 80px;
+  text-align: center;
+  width: 235px;
+}
+.page-homepage .features li h3 {
+  color: #444;
+  font-size: 16px;
   font-weight: bold;
+  line-height: normal;
+  margin: 0px 0px 10px;
+}
+.page-homepage .features li p {
+  color: #666;
+  font-size: 15px;
+  line-height: 26px;
+  padding: 0px 10px;
+}
+.page-homepage .features li.hosting {
+  background: url(../images/homepage/feature_hosting.png) center top no-repeat;
+}
+.page-homepage .features li.share {
+  background: url(../images/homepage/feature_share.png) center top no-repeat;
+}
+.page-homepage .features li.writing {
+  background: url(../images/homepage/feature_writing.png) center top no-repeat;
+}
+.page-homepage .features li.love {
+  background: url(../images/homepage/feature_love.png) center top no-repeat;
+}
+.page-homepage .signup_box {
+  margin-top: 40px;
+  text-align: center;
+}
+.page-homepage .signup_box h2 {
+  color: #666;
+  font-family: 'QuarkLight', sans-serif;
+  font-size: 32px;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0px 0px 20px;
+}
+.page-homepage .signup_box a.signup {
+  background-color: #45b8ac;
+  border-radius: 3px;
+  color: #FFF;
+  display: inline-block;
+  font-size: 18px;
+  padding: 20px 80px;
+}
+.page-homepage .signup_box a.signup:hover {
+  background-color: #379389;
+  text-decoration: none;
 }
 .page-homepage .introduction {
   margin-top: 30px;

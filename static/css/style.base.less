@@ -4,12 +4,18 @@
 @linkColor: #007a8d;
 @lighterLinkColor: #0090a7;
 
+
+@color_turquoise: #45b8ac;
+@color_darker_turquoise: #379389;
+
+
 @light: #f5f4f0;
 @orange: #de7350;
 @brown: #5b5353;
 @brown-lighter: #5b5353;
 @blue: #007a8d;
 @blue-lighter: #0090a7;
+
 
 // Mixins ##############################################################################################################
 
@@ -22,6 +28,18 @@
     &:hover {
         text-decoration: underline;
         text-shadow: none;
+    }
+}
+
+.button_turquoise() {
+    background-color: @color_turquoise;
+    border-radius: 3px;
+    color: #FFF;
+    display: inline-block;
+
+    &:hover {
+        background-color: @color_darker_turquoise;
+        text-decoration: none;
     }
 }
 

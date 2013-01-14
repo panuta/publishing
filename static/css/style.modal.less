@@ -8,9 +8,10 @@ body.modal-open {
 }
 
 .modal {
-    border: none;
+    //border: none;
+    border: 10px solid @color_turquoise;
     border-radius: 0px;
-    border-top: 6px solid @orange;
+    //border-top: 6px solid #45b8ac;
 
     .modal-header {
         border-bottom: 0px;
@@ -59,49 +60,48 @@ body.modal-open {
 
         .close {
             float: right;
-            margin: 7px 11px 0px 0px;
+            margin: 5px 11px 0px 0px;
         }
 
         .nav-tabs {
-            border-bottom: 1px solid @brown;
-            background-color: @brown;
+            border-bottom: 1px solid @color_turquoise;
+            background-color: @color_turquoise;
             margin: 0px;
 
             li {
                 a {
-                    background-color: @brown;
+                    background-color: @color_turquoise;
                     border: none;
                     border-radius: 0;
-                    color: #EEE;
+                    color: #FFF;
                     font-size: 1.1em;
                     margin-right: 0px;
                     padding: 12px 30px 10px 30px;
                     outline: none;
 
                     &:hover {
-                        background-color: #CCC;
-                        color: @brown;
+                        background-color: @color_darker_turquoise;
                     }
                 }
 
                 &.active {
                     a {
                         background-color: #FFF;
-                        color: @brown;
+                        color: @color_turquoise;
                     }
                 }
             }
         }
 
         .tab-content {
-            padding: 25px;
+            padding: 20px;
 
             .facebook {
                 text-align: center;
             }
 
             .or {
-                margin-top: 25px;
+                margin-top: 20px;
                 text-align: center;
 
                 hr {
@@ -113,20 +113,29 @@ body.modal-open {
                 span {
                     background-color: #FFF;
                     color: #777;
-
+                    font-size: 12px;
                     display: inline-block;
                     padding: 0 10px;
                     position: relative;
-                    top: -16px;
+                    top: -18px;
                 }
             }
 
-            .form {
-                form {
+            form {
+                margin: 0px;
+
+                .control-group {
+                    margin-bottom: 0px;
+                    text-align: center;
+
                     label {
-                        color: #444;
+                        color: #666;
                         font-size: 0.95em;
-                        font-weight: bold;
+                        font-weight: normal;
+                    }
+
+                    input {
+                        width: 250px;
                     }
                 }
             }
