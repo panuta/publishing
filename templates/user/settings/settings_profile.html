@@ -1,10 +1,10 @@
-{% extends 'accounts/settings/settings_base.html' %}
+{% extends 'user/settings/settings_base.html' %}
 
-{% block settings_nav %}{% include 'accounts/settings/settings_nav.html' with settings_tab='profile' %}{% endblock %}
+{% block settings_nav %}{% include 'user/settings/settings_nav.html' with settings_tab='profile' %}{% endblock %}
 
 {% block settings_body %}
-<div class="page-my-settings-profile">
-    <form method="post" action="." class="form" enctype="multipart/form-data">
+<div class="page-user-settings-profile">
+    <form method="post" action="" class="form" enctype="multipart/form-data">
         {% csrf_token %}
 
         <fieldset>

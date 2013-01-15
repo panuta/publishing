@@ -1,0 +1,4 @@
+<li class="writeroom{% if user_nav == 'writeroom' %} active{% endif %}"><a href="{% url 'view_user_writeroom' %}">ห้องหนังสือ</a></li>
+<li class="messages{% if user_nav == 'messages' %} active{% endif %}"><a href="{% url 'view_user_messages' %}">กล่องจดหมาย</a></li>
+<li class="balance{% if user_nav == 'balance' %} active{% endif %}"><a href="{% url 'view_user_balance' %}">สมุดบัญชี</a></li>
+<li class="settings{% if user_nav == 'settings' %} active{% endif %}"><a href="{% url 'view_user_settings_profile' %}">ตั้งค่าการใช้งาน</a></li>

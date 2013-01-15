@@ -1,10 +1,10 @@
-{% extends 'accounts/settings/settings_base.html' %}
+{% extends 'user/settings/settings_base.html' %}
 
-{% block settings_nav %}{% include 'accounts/settings/settings_nav.html' with settings_tab='account' %}{% endblock %}
+{% block settings_nav %}{% include 'user/settings/settings_nav.html' with settings_tab='account' %}{% endblock %}
 
 {% block settings_body %}
 <div class="page-my-settings-account">
-    <form method="post" action="." class="form">
+    <form method="post" action="" class="form">
         {% csrf_token %}
         <fieldset>
             <legend>เปลี่ยนอีเมล</legend>
@@ -22,7 +22,7 @@
         </fieldset>
     </form>
 
-    <form method="post" action="." class="form">
+    <form method="post" action="" class="form">
         {% csrf_token %}
         <fieldset>
             <legend>เปลี่ยนรหัสผ่าน</legend>

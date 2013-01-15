@@ -138,3 +138,52 @@ class UserAccount(AbstractBaseUser):
         if self.avatar:
             return get_thumbnailer(self.avatar)['avatar_tiny'].url
         return '%simages/%s' % (settings.STATIC_URL, settings.USER_AVATAR_DEFAULT_TINY)
+
+
+# PUBLICATION ##########################################################################################################
+
+def publication_cover_dir(instance, filename):
+    return 'users/%s/publications/%s' % (instance.created_by.user_uid, filename)
+
+class Publication(models.Model):
+    uid = models.CharField(max_length=50)
+    title = models.CharField(max_length=500)
+    description = models.CharField(max_length=2000, blank=True, default='')
+    cover = ThumbnailerImageField(upload_to=publication_cover_dir, blank=True, null=True)
+    excerpt = models.TextField(blank=True, default='')
+    price = models.DecimalField(max_digits=10, decimal_places=2, null=True)
+    is_draft = models.BooleanField(default=True)
+    created_by = models.ForeignKey('UserAccount', related_name='authored_publications')
+    created_on = models.DateTimeField(default=timezone.now())
+    modified_on = models.DateTimeField(default=timezone.now())
+    published_on = models.DateTimeField()
+
+    class Meta:
+        ordering = ['-published_on']
+
+    def save(self, *args, **kwargs):
+        if not self.uid:
+            uuid = None
+
+            while not uuid:
+                shortuuid.set_alphabet(SHORTUUID_ALPHABETS_FOR_ID)
+                uuid = shortuuid.uuid()[:10]
+
+                try:
+                    Publication.objects.get(uid=uuid)
+                except Publication.DoesNotExist:
+                    pass
+                else:
+                    uuid = None
+
+            self.uid = uuid
+
+        models.Model.save(self, *args, **kwargs)
+
+
+class PublicationContent(models.Model):
+    publication = models.ForeignKey('Publication', related_name='contents')
+    chapter_title = models.CharField(max_length=300)
+    body = models.TextField(blank=True, default='')
+    ordering = models.PositiveIntegerField(default=0)
+

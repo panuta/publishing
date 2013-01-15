@@ -236,11 +236,31 @@
 
 // ACCOUNTS ############################################################################################################
 
-.page-writeroom {
-    .style-page-header h1 {
-        background: url(../images/accounts/nav_writeroom.png) left center no-repeat;
+.page-user-base {
+    .style-page-navigation {
+        li.writeroom {
+            background-image: url(../images/nav/nav-writeroom.png);
+        }
+
+        li.messages {
+            background-image: url(../images/nav/nav-messages.png);
+        }
+
+        li.balance {
+            background-image: url(../images/nav/nav-balance.png);
+        }
+
+        li.settings {
+            background-image: url(../images/nav/nav-settings.png);
+        }
     }
 
+
+}
+
+// USER WRITEROOM ######################################################################################################
+
+.page-user-writeroom {
     .stats {
         border-bottom: 1px solid #DDD;
         margin-bottom: 25px;
@@ -413,8 +433,167 @@
                 }
 
             }
+        }
+    }
+}
 
+.page-user-writeroom-edit {
+    .writing-header {
+        border-bottom: 1px solid #DDD;
+        padding-bottom: 10px;
 
+        h1 {
+            color: #444;
+            font-size: 22px;
+            line-height: normal;
+            margin: 15px 0px;
+        }
+
+        .status {
+            float: left;
+
+            em {
+                border-radius: 3px;
+                display: inline-block;
+                font-size: 12px;
+                padding: 2px 20px;
+
+                &.draft {
+                    background-color: #999;
+                    color: #FFF;
+                }
+            }
+        }
+
+        .actions {
+            text-align: right;
+        }
+    }
+
+    .writing-nav {
+        padding-top: 10px;
+        float: left;
+        margin-left: 20px;
+        min-height: 1px;
+        width: 100px;
+
+        li {
+            list-style: none;
+            margin-bottom: 10px;
+
+            a {
+                background: url(../images/writing/steps.png) #EEE no-repeat;
+                color: #555;
+                display: block;
+                font-weight: bold;
+                height: 30px;
+                padding-top: 50px;
+                text-align: center;
+                width: 100px;
+
+                &.one {
+                    background-position: center 10px;
+                }
+
+                &.two {
+                    background-position: center -190px;
+                }
+
+                &.three {
+                    background-position: center -390px;
+                }
+
+                &.four {
+                    background-position: center -590px;
+                }
+            }
+
+            &.active {
+                a {
+                    background-color: @color_orange;
+                    color: #FFF;
+
+                    &.one {
+                        background-position: center -90px;
+                    }
+
+                    &.two {
+                        background-position: center -290px;
+                    }
+
+                    &.three {
+                        background-position: center -490px;
+                    }
+
+                    &.four {
+                        background-position: center -690px;
+                    }
+                }
+            }
+        }
+    }
+
+    .writing-body {
+        float: left;
+        margin-left: 20px;
+        min-height: 1px;
+        width: 820px;
+    }
+}
+
+// USER MESSAGES #######################################################################################################
+
+.page-user-messages {
+
+}
+
+// USER BALANCE ########################################################################################################
+
+.page-user-balance {
+
+}
+
+// USER SETTINGS #######################################################################################################
+
+.page-user-settings {
+    margin-top: 20px;
+
+    .left {
+        float: left;
+        width: 190px;
+
+        li {
+            list-style: none;
+            margin-bottom: 18px;
+
+            &.active {
+                a {
+                    background-color: @color_orange;
+                    color: #FFF;
+                }
+            }
+
+            a {
+                background-color: #EEE;
+                color: #555;
+                display: block;
+                font-size: 15px;
+                padding: 10px 10px;
+
+                &:hover {
+                    background-color: @color_orange;
+                    color: #FFF;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .right {
+        margin-left: 240px;
+
+        form .controls textarea {
+            height: 80px;
         }
     }
 }
@@ -871,56 +1050,7 @@
     }
 }
 
-.page-my-settings {
-    .style-page-header {
-        margin-bottom: 20px;
 
-        h1 {
-            background: url(../images/accounts/nav_user_settings.png) left center no-repeat;
-        }
-    }
-
-    .left {
-        float: left;
-        width: 190px;
-
-        li {
-            list-style: none;
-            margin-bottom: 18px;
-
-            &.active {
-                a {
-                    background-color: @color_orange;
-                    border: 1px solid @color_orange;
-                    color: #FFF;
-                }
-            }
-
-            a {
-                background-color: #EEE;
-                color: #555;
-                display: block;
-                font-size: 1.2em;
-                padding: 15px 10px;
-
-                &:hover {
-                    background-color: @color_orange;
-                    border: 1px solid @color_orange;
-                    color: #FFF;
-                    text-decoration: none;
-                }
-            }
-        }
-    }
-
-    .right {
-        margin-left: 240px;
-
-        form .controls textarea {
-            height: 80px;
-        }
-    }
-}
 
 // PUBLICATION #########################################################################################################
 

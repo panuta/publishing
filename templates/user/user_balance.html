@@ -1,0 +1,18 @@
+{% extends 'user/user_base.html' %}
+
+{% block html_head %}
+<script type="text/javascript">
+$(document).ready(function() {
+
+});
+</script>
+{% endblock %}
+
+{% block user_nav %}{% include 'user/user_nav.html' with user_nav='balance' %}{% endblock %}
+{% block user_title %}สมุดบัญชี{% endblock %}
+
+{% block user_content %}
+<div class="page-user-balance">
+
+</div>
+{% endblock %}

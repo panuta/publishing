@@ -1,0 +1,86 @@
+{% extends 'user/user_base.html' %}
+
+{% block html_head %}
+<script type="text/javascript">
+$(document).ready(function() {
+
+});
+</script>
+{% endblock %}
+
+{% block user_nav %}{% include 'user/user_nav.html' with user_nav='writeroom' %}{% endblock %}
+{% block user_title %}ห้องหนังสือ{% endblock %}
+
+{% block user_content %}
+<div class="page-user-writeroom">
+    <div class="stats clearfix">
+        <div class="stat">
+            <div class="title">TOTAL PUBLISHED</div>
+            <div class="number"><em>5</em> Publications</div>
+        </div>
+        <div class="stat">
+            <div class="title">WEEKLY PURCHASED</div>
+            <div class="number"><em>500</em> Publications</div>
+        </div>
+        <div class="stat">
+            <div class="title">WEEKLY INCOME</div>
+            <div class="number"><em>500</em> Baht</div>
+        </div>
+        <div class="stat">
+            <div class="title">TOP PURCHASED</div>
+            <div class="number"><a href="#">Publication title</a></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span9 block-list">
+            <div class="types"><a href="#" class="active">Draft (2)</a><!--<span class="separator">|</span>--><a href="#">Published (5)</a></div>
+            <ul class="publications">
+                <li class="publication">
+                    <div class="clearfix">
+                        <div class="cover"><img src="{{ STATIC_URL }}images/sample/covers/cover2.jpg" width="85" height="85" /></div>
+                        <div class="details">
+                            <div class="title">Publication title</div>
+                            <div class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed faucibus dui. Aenean non urna et nunc tristique eleifend. Nunc sed mi quam, et porttitor sem. Fusce porttitor facilisis luctus.</div>
+                            <div class="actions">
+                                <a href="#" class="btn btn-small button-writing">Continue writing</a>
+                                <a href="#" class="btn btn-small button-more"><span class="caret"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="publication">
+                    <div class="clearfix">
+                        <div class="cover"><img src="{{ STATIC_URL }}images/sample/covers/cover2.jpg" width="85" height="85" /></div>
+                        <div class="details">
+                            <div class="title">Publication title</div>
+                            <div class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed faucibus dui. Aenean non urna et nunc tristique eleifend. Nunc sed mi quam, et porttitor sem. Fusce porttitor facilisis luctus.</div>
+                            <div class="actions">
+                                <a href="#" class="btn btn-small button-writing">Continue writing</a>
+                                <a href="#" class="btn btn-small button-more"><span class="caret"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="span3 block-sidebar">
+            <div class="new">
+                <a href="{% url 'start_new_writing' %}" class="button-new-publication"><i class="icon-pencil icon-white"></i> เขียนงานชิ้นใหม่</a>
+            </div>
+            <div class="feedbacks">
+                <h3>RECENT FEEDBACK</h3>
+                <ul>
+                    <li>
+                        <div class="from">Panu Tangchalermkul</div>
+                        <div class="feedback">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed faucibus dui. Aenean non urna et nunc tristique eleifend.</div>
+                    </li>
+                    <li>
+                        <div class="from">Panu Tangchalermkul</div>
+                        <div class="feedback">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed faucibus dui. Aenean non urna et nunc tristique eleifend.</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -250,10 +250,10 @@ html {
   background: url(../images/ui/logo.png) no-repeat;
   color: #5b5353;
   display: block;
-  height: 38px;
+  height: 42px;
   margin-top: 20px;
   text-indent: -9999px;
-  width: 190px;
+  width: 207px;
 }
 #body-header .right {
   float: right;
@@ -380,22 +380,136 @@ html {
   text-align: center;
 }
 .style-page-header {
-  border-bottom: 1px solid #DDD;
-  border-top: 2px solid #999;
-  margin: 20px 0px 0px;
-  padding: 0px;
+  background: #45b8ac 20px 12px no-repeat;
+  border-top: 6px solid #666;
+  border-bottom: 3px solid #7ccec5;
+  margin: 0px 0px 0px;
+  padding: 20px 0px 10px 65px;
+}
+.style-page-header .breadcrumbs {
+  margin-bottom: 5px;
+}
+.style-page-header .breadcrumbs a {
+  color: #EEE;
+  font-size: 13px;
+  text-decoration: underline;
+}
+.style-page-header .breadcrumbs a:hover {
+  background-color: #3a7dbf;
+  color: #FFF;
+}
+.style-page-header .breadcrumbs .divider {
+  color: #CCC;
+  margin: 0px 8px;
 }
 .style-page-header h1 {
-  display: inline-block;
-  color: #555;
-  font-size: 22px;
+  color: #FFF;
+  font-size: 18px;
   font-weight: normal;
   line-height: normal;
   margin: 0px;
-  padding: 15px 20px 15px 40px;
 }
-.style-page-header:after {
-  clear: both;
+.style-page-navigation {
+  background: #45b8ac 20px 12px no-repeat;
+  border-top: 6px solid #666;
+  margin: 0px;
+}
+.style-page-navigation ul li {
+  background: 15px center no-repeat;
+  border-right: 1px solid #69c7bd;
+  list-style: none;
+  float: left;
+  padding: 15px 20px 15px 47px;
+  position: relative;
+}
+.style-page-navigation ul li a {
+  color: #FFF;
+}
+.style-page-navigation ul li a:hover {
+  text-decoration: underline;
+}
+.style-page-navigation ul li:first-child {
+  border-left: 1px solid #69c7bd;
+}
+.style-page-navigation ul li.active:after {
+  top: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.style-page-navigation ul li.active:after {
+  border-color: rgba(69, 184, 172, 0);
+  border-top-color: #45b8ac;
+  border-width: 8px;
+  left: 50%;
+  margin-left: -8px;
+}
+.style-page-breadcrumb {
+  background-color: #f5f4f0;
+  border-bottom: 1px solid #D6D6D6;
+  padding: 18px 0px 6px;
+}
+.style-page-breadcrumb li {
+  display: inline-block;
+  list-style: none;
+}
+.style-page-breadcrumb li a {
+  color: #777;
+}
+.style-page-breadcrumb li .divider {
+  color: #CCC;
+  margin: 0px 5px;
+}
+.style-page-breadcrumb li.active {
+  color: #777;
+}
+.style-page-breadcrumb li:first-child {
+  background: url(../images/ui/breadcrumb-home.png) left center no-repeat;
+  padding-left: 22px;
+}
+.style-page-title {
+  border-bottom: 1px solid #DDD;
+  padding: 25px 0px 0px;
+}
+.style-page-title h1 {
+  color: #444;
+  font-family: 'QuarkLight', sans-serif;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0px;
+}
+.style-content-navigation {
+  padding: 15px 0px;
+}
+.style-content-navigation a {
+  font-size: 15px;
+}
+.style-content-navigation a:link,
+.style-content-navigation a:active,
+.style-content-navigation a:visited {
+  color: #3a7dbf;
+  text-decoration: underline;
+}
+.style-content-navigation a:hover {
+  background-color: #3a7dbf;
+  color: #FFF;
+  text-shadow: none;
+}
+.style-content-navigation a.active {
+  color: #444;
+  text-decoration: none;
+}
+.style-content-navigation a.active:hover {
+  color: #FFF;
+  text-decoration: underline;
+}
+.style-content-navigation .divider {
+  color: #BBB;
+  margin: 0px 7px;
 }
 .alert {
   border: none;
@@ -1027,37 +1141,46 @@ body.modal-open {
 .page-homepage .publications .right-publication {
   margin: 30px 0px 20px 0px;
 }
-.page-writeroom .style-page-header h1 {
-  background: url(../images/accounts/nav_writeroom.png) left center no-repeat;
+.page-user-base .style-page-navigation li.writeroom {
+  background-image: url(../images/nav/nav-writeroom.png);
 }
-.page-writeroom .stats {
+.page-user-base .style-page-navigation li.messages {
+  background-image: url(../images/nav/nav-messages.png);
+}
+.page-user-base .style-page-navigation li.balance {
+  background-image: url(../images/nav/nav-balance.png);
+}
+.page-user-base .style-page-navigation li.settings {
+  background-image: url(../images/nav/nav-settings.png);
+}
+.page-user-writeroom .stats {
   border-bottom: 1px solid #DDD;
   margin-bottom: 25px;
   padding: 10px 0px;
 }
-.page-writeroom .stats .stat {
+.page-user-writeroom .stats .stat {
   border-right: 1px solid #EEE;
   float: left;
   margin-right: 15px;
   padding-right: 25px;
 }
-.page-writeroom .stats .stat .title {
+.page-user-writeroom .stats .stat .title {
   color: #555;
   font-size: 13px;
   font-weight: bold;
   margin: 5px 0px 7px;
 }
-.page-writeroom .stats .stat .number {
+.page-user-writeroom .stats .stat .number {
   color: #777;
   font-size: 16px;
 }
-.page-writeroom .stats .stat .number em {
+.page-user-writeroom .stats .stat .number em {
   color: #444;
   font-size: 26px;
   font-weight: bold;
   margin-right: 4px;
 }
-.page-writeroom .stats .stat .number a {
+.page-user-writeroom .stats .stat .number a {
   color: #555;
   font-size: 14px;
   font-weight: bold;
@@ -1065,15 +1188,15 @@ body.modal-open {
   margin-top: 3px;
   text-decoration: underline;
 }
-.page-writeroom .stats .stat .number a:hover {
+.page-user-writeroom .stats .stat .number a:hover {
   background-color: #3a7dbf;
   color: #FFF;
 }
-.page-writeroom .block-sidebar h2 {
+.page-user-writeroom .block-sidebar h2 {
   font-size: 18px;
   line-height: normal;
 }
-.page-writeroom .block-sidebar .new a.button-new-publication {
+.page-user-writeroom .block-sidebar .new a.button-new-publication {
   background-color: #45b8ac;
   border-radius: 3px;
   box-shadow: 2px 2px 0px #DDD;
@@ -1081,41 +1204,41 @@ body.modal-open {
   display: inline-block;
   padding: 7px 30px;
 }
-.page-writeroom .block-sidebar .new a.button-new-publication:hover {
+.page-user-writeroom .block-sidebar .new a.button-new-publication:hover {
   background-color: #379389;
   text-decoration: none;
 }
-.page-writeroom .block-sidebar .feedbacks {
+.page-user-writeroom .block-sidebar .feedbacks {
   margin-top: 30px;
 }
-.page-writeroom .block-sidebar .feedbacks h3 {
+.page-user-writeroom .block-sidebar .feedbacks h3 {
   color: #dd7144;
   font-size: 14px;
   font-weight: bold;
   line-height: normal;
 }
-.page-writeroom .block-sidebar .feedbacks li {
+.page-user-writeroom .block-sidebar .feedbacks li {
   list-style: none;
   margin-bottom: 20px;
 }
-.page-writeroom .block-sidebar .feedbacks li .from {
+.page-user-writeroom .block-sidebar .feedbacks li .from {
   font-size: 13px;
   font-weight: bold;
 }
-.page-writeroom .block-sidebar .feedbacks li .feedback {
+.page-user-writeroom .block-sidebar .feedbacks li .feedback {
   color: #666;
   font-size: 13px;
   line-height: 21px;
   margin-top: 4px;
 }
-.page-writeroom .block-list .types {
+.page-user-writeroom .block-list .types {
   margin-bottom: 20px;
 }
-.page-writeroom .block-list .types a.active {
+.page-user-writeroom .block-list .types a.active {
   background-color: #dd7144;
   color: #FFF;
 }
-.page-writeroom .block-list .types a {
+.page-user-writeroom .block-list .types a {
   background-color: #EEE;
   color: #555;
   display: inline-block;
@@ -1124,49 +1247,163 @@ body.modal-open {
   padding: 5px 15px;
   text-decoration: none;
 }
-.page-writeroom .block-list .types a:hover {
+.page-user-writeroom .block-list .types a:hover {
   background-color: #dd7144;
   color: #FFF;
 }
-.page-writeroom .block-list .types .separator {
+.page-user-writeroom .block-list .types .separator {
   color: #BBB;
   margin: 0px 6px;
 }
-.page-writeroom .block-list ul.publications {
+.page-user-writeroom .block-list ul.publications {
   margin: 10px 0px 0px;
 }
-.page-writeroom .block-list li.publication {
+.page-user-writeroom .block-list li.publication {
   list-style: none;
   border-bottom: 1px dashed #DDD;
   margin-bottom: 20px;
   padding-bottom: 20px;
 }
-.page-writeroom .block-list li.publication .cover {
+.page-user-writeroom .block-list li.publication .cover {
   float: left;
 }
-.page-writeroom .block-list li.publication .details {
+.page-user-writeroom .block-list li.publication .details {
   margin-left: 105px;
 }
-.page-writeroom .block-list li.publication .details .title {
+.page-user-writeroom .block-list li.publication .details .title {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 5px;
 }
-.page-writeroom .block-list li.publication .details .excerpt {
+.page-user-writeroom .block-list li.publication .details .excerpt {
   color: #555;
   font-size: 13px;
 }
-.page-writeroom .block-list li.publication .details .actions {
+.page-user-writeroom .block-list li.publication .details .actions {
   margin-top: 10px;
 }
-.page-writeroom .block-list li.publication .details .actions .button-writing {
+.page-user-writeroom .block-list li.publication .details .actions .button-writing {
   font-weight: bold;
   margin-right: 5px;
   padding-left: 25px;
   padding-right: 25px;
 }
-.page-writeroom .block-list li.publication .details .actions .button-more span {
+.page-user-writeroom .block-list li.publication .details .actions .button-more span {
   margin-top: 9px;
+}
+.page-user-writeroom-edit .writing-header {
+  border-bottom: 1px solid #DDD;
+  padding-bottom: 10px;
+}
+.page-user-writeroom-edit .writing-header h1 {
+  color: #444;
+  font-size: 22px;
+  line-height: normal;
+  margin: 15px 0px;
+}
+.page-user-writeroom-edit .writing-header .status {
+  float: left;
+}
+.page-user-writeroom-edit .writing-header .status em {
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 12px;
+  padding: 2px 20px;
+}
+.page-user-writeroom-edit .writing-header .status em.draft {
+  background-color: #999;
+  color: #FFF;
+}
+.page-user-writeroom-edit .writing-header .actions {
+  text-align: right;
+}
+.page-user-writeroom-edit .writing-nav {
+  padding-top: 10px;
+  float: left;
+  margin-left: 20px;
+  min-height: 1px;
+  width: 100px;
+}
+.page-user-writeroom-edit .writing-nav li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.page-user-writeroom-edit .writing-nav li a {
+  background: url(../images/writing/steps.png) #eeeeee no-repeat;
+  color: #555;
+  display: block;
+  font-weight: bold;
+  height: 30px;
+  padding-top: 50px;
+  text-align: center;
+  width: 100px;
+}
+.page-user-writeroom-edit .writing-nav li a.one {
+  background-position: center 10px;
+}
+.page-user-writeroom-edit .writing-nav li a.two {
+  background-position: center -190px;
+}
+.page-user-writeroom-edit .writing-nav li a.three {
+  background-position: center -390px;
+}
+.page-user-writeroom-edit .writing-nav li a.four {
+  background-position: center -590px;
+}
+.page-user-writeroom-edit .writing-nav li.active a {
+  background-color: #dd7144;
+  color: #FFF;
+}
+.page-user-writeroom-edit .writing-nav li.active a.one {
+  background-position: center -90px;
+}
+.page-user-writeroom-edit .writing-nav li.active a.two {
+  background-position: center -290px;
+}
+.page-user-writeroom-edit .writing-nav li.active a.three {
+  background-position: center -490px;
+}
+.page-user-writeroom-edit .writing-nav li.active a.four {
+  background-position: center -690px;
+}
+.page-user-writeroom-edit .writing-body {
+  float: left;
+  margin-left: 20px;
+  min-height: 1px;
+  width: 820px;
+}
+.page-user-settings {
+  margin-top: 20px;
+}
+.page-user-settings .left {
+  float: left;
+  width: 190px;
+}
+.page-user-settings .left li {
+  list-style: none;
+  margin-bottom: 18px;
+}
+.page-user-settings .left li.active a {
+  background-color: #dd7144;
+  color: #FFF;
+}
+.page-user-settings .left li a {
+  background-color: #EEE;
+  color: #555;
+  display: block;
+  font-size: 15px;
+  padding: 10px 10px;
+}
+.page-user-settings .left li a:hover {
+  background-color: #dd7144;
+  color: #FFF;
+  text-decoration: none;
+}
+.page-user-settings .right {
+  margin-left: 240px;
+}
+.page-user-settings .right form .controls textarea {
+  height: 80px;
 }
 .page-room .row {
   margin-top: 30px;
@@ -1523,44 +1760,6 @@ body.modal-open {
 }
 .page-profile .publications .right-publication {
   margin: 0px 0px 30px 0px;
-}
-.page-my-settings .style-page-header {
-  margin-bottom: 20px;
-}
-.page-my-settings .style-page-header h1 {
-  background: url(../images/accounts/nav_user_settings.png) left center no-repeat;
-}
-.page-my-settings .left {
-  float: left;
-  width: 190px;
-}
-.page-my-settings .left li {
-  list-style: none;
-  margin-bottom: 18px;
-}
-.page-my-settings .left li.active a {
-  background-color: #dd7144;
-  border: 1px solid #dd7144;
-  color: #FFF;
-}
-.page-my-settings .left li a {
-  background-color: #EEE;
-  color: #555;
-  display: block;
-  font-size: 1.2em;
-  padding: 15px 10px;
-}
-.page-my-settings .left li a:hover {
-  background-color: #dd7144;
-  border: 1px solid #dd7144;
-  color: #FFF;
-  text-decoration: none;
-}
-.page-my-settings .right {
-  margin-left: 240px;
-}
-.page-my-settings .right form .controls textarea {
-  height: 80px;
 }
 .page-publication-view .row {
   margin-top: 30px;

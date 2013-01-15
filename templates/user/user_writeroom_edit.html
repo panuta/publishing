@@ -1,0 +1,46 @@
+{% extends 'user/user_base.html' %}
+
+{% block html_head %}
+<script type="text/javascript">
+$(document).ready(function() {
+
+});
+</script>
+{% endblock %}
+
+{% block user_nav %}{% include 'user/user_nav.html' with user_nav='writeroom' %}{% endblock %}
+
+{% block user_breadcrumb %}
+<div class="style-page-breadcrumb"><div class="container"><ul>
+    <li><a href="#">ห้องหนังสือ</a> <span class="divider">/</span></li>
+    <li class="active">เขียนงานชิ้นใหม่</li>
+</ul></div></div>
+{% endblock %}
+
+{% block user_title %}เขียนงานชิ้นใหม่{% endblock %}
+
+{% block user_content %}
+<div class="page-user-writeroom-edit">
+    <div class="container">
+        <div class="writing-header">
+            <h1>(untitled)</h1>
+            <div class="status"><em class="draft">DRAFT</em></div>
+            <div class="actions"><a href="#" class="btn btn-small">Tools</a></div>
+        </div>
+        <div class="row">
+            <div class="writing-nav">
+                <ul>
+                    <li class="active"><a href="#" class="one">Outline</a></li>
+                    <li><a href="#" class="two">Content</a></li>
+                    <li><a href="#" class="three">Finalize</a></li>
+                </ul>
+            </div>
+            <div class="writing-body">
+                <div class="body-outline"></div>
+                <div class="body-content"></div>
+                <div class="body-finalize"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
