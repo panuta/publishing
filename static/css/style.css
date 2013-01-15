@@ -1032,7 +1032,7 @@ body.modal-open {
 }
 .page-writeroom .stats {
   border-bottom: 1px solid #DDD;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   padding: 10px 0px;
 }
 .page-writeroom .stats .stat {
@@ -1073,25 +1073,40 @@ body.modal-open {
   font-size: 18px;
   line-height: normal;
 }
-.page-writeroom .block-sidebar .new {
-  margin-bottom: 20px;
-}
-.page-writeroom .block-sidebar .new a {
+.page-writeroom .block-sidebar .new a.button-new-publication {
   background-color: #45b8ac;
   border-radius: 3px;
+  box-shadow: 2px 2px 0px #DDD;
   color: #FFF;
   display: inline-block;
-  padding: 7px 20px;
+  padding: 7px 30px;
 }
-.page-writeroom .block-sidebar .new a:hover {
+.page-writeroom .block-sidebar .new a.button-new-publication:hover {
   background-color: #379389;
   text-decoration: none;
 }
-.page-writeroom .block-sidebar .new p {
+.page-writeroom .block-sidebar .feedbacks {
+  margin-top: 30px;
+}
+.page-writeroom .block-sidebar .feedbacks h3 {
+  color: #dd7144;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: normal;
+}
+.page-writeroom .block-sidebar .feedbacks li {
+  list-style: none;
+  margin-bottom: 20px;
+}
+.page-writeroom .block-sidebar .feedbacks li .from {
+  font-size: 13px;
+  font-weight: bold;
+}
+.page-writeroom .block-sidebar .feedbacks li .feedback {
   color: #666;
   font-size: 13px;
   line-height: 21px;
-  margin-top: 8px;
+  margin-top: 4px;
 }
 .page-writeroom .block-list .types {
   margin-bottom: 20px;

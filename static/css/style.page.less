@@ -243,7 +243,7 @@
 
     .stats {
         border-bottom: 1px solid #DDD;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
         padding: 10px 0px;
 
         .stat {
@@ -294,30 +294,48 @@
         }
 
         .new {
-            margin-bottom: 20px;
-
-            a {
+            a.button-new-publication {
                 background-color: @color_turquoise;
                 border-radius: 3px;
+                box-shadow: 2px 2px 0px #DDD;
                 color: #FFF;
                 display: inline-block;
-                padding: 7px 20px;
+                padding: 7px 30px;
 
                 &:hover {
                     background-color: @color_darker_turquoise;
                     text-decoration: none;
                 }
             }
-
-            p {
-                color: #666;
-                font-size: 13px;
-                line-height: 21px;
-                margin-top: 8px;
-            }
         }
 
+        .feedbacks {
+            margin-top: 30px;
 
+            h3 {
+                color: @color_orange;
+                font-size: 14px;
+                font-weight: bold;
+                line-height: normal;
+            }
+
+            li {
+                list-style: none;
+                margin-bottom: 20px;
+
+                .from {
+                    font-size: 13px;
+                    font-weight: bold;
+                }
+
+                .feedback {
+                    color: #666;
+                    font-size: 13px;
+                    line-height: 21px;
+                    margin-top: 4px;
+                }
+            }
+        }
     }
 
     .block-list {
