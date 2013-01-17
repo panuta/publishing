@@ -954,7 +954,7 @@ body.modal-open {
   list-style: none;
   padding-top: 80px;
   text-align: center;
-  width: 235px;
+  width: 313px;
 }
 .page-homepage .features li h3 {
   color: #444;
@@ -971,9 +971,6 @@ body.modal-open {
 }
 .page-homepage .features li.hosting {
   background: url(../images/homepage/feature_hosting.png) center top no-repeat;
-}
-.page-homepage .features li.share {
-  background: url(../images/homepage/feature_share.png) center top no-repeat;
 }
 .page-homepage .features li.writing {
   background: url(../images/homepage/feature_writing.png) center top no-repeat;
