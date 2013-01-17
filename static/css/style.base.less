@@ -10,14 +10,16 @@
 @color_orange: #dd7144;
 @color_darker_orange: #ca5524;
 
+@color_dark_blue: #536b79;
 
+/*
 @light: #f5f4f0;
 @orange: #de7350;
 @brown: #5b5353;
 @brown-lighter: #5b5353;
 @blue: #007a8d;
 @blue-lighter: #0090a7;
-
+*/
 
 // Mixins ##############################################################################################################
 
@@ -54,6 +56,19 @@
 
     &:hover {
         background-color: @color_darker_turquoise;
+        color: #FFF;
+        text-decoration: none;
+    }
+}
+
+.button_orange() {
+    background-color: @color_orange;
+    border: 0;
+    border-radius: 3px;
+    color: #FFF;
+
+    &:hover {
+        background-color: @color_darker_orange;
         color: #FFF;
         text-decoration: none;
     }
