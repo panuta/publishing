@@ -30,7 +30,7 @@ def view_user_settings_profile(request):
                 user.avatar.save('avatar.%s' % ext, avatar)
 
             messages.success(request, u'บันทึกการเปลี่ยนแปลงเรียบร้อย')
-            return redirect('edit_my_profile')
+            return redirect('view_user_settings_profile')
 
     else:
         form = EditProfileForm(user, initial={
@@ -57,7 +57,7 @@ def view_user_settings_account(request):
                 request.user.save()
 
                 messages.success(request, u'เปลี่ยนอีเมลเรียบร้อย')
-                return redirect('edit_my_account')
+                return redirect('view_user_settings_account')
 
             else:
                 password_form = NoAutoFillPasswordChangeForm(request.user)
@@ -69,7 +69,7 @@ def view_user_settings_account(request):
                 request.user.save()
 
                 messages.success(request, u'เปลี่ยนรหัสผ่านเรียบร้อย')
-                return redirect('edit_my_account')
+                return redirect('view_user_settings_account')
 
             else:
                 email_form = EmailChangeForm(initial={'email':request.user.email})

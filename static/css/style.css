@@ -535,17 +535,31 @@ html {
 .alert-error {
   background: url(../images/alert/messages.png) #cc3300 18px -109px no-repeat;
 }
-.button-submit {
+.style-button-turquoise {
   background-color: #45b8ac;
+  border: 0;
   border-radius: 3px;
   color: #FFF;
   display: inline-block;
+  font-size: 14px;
+  padding: 10px 35px;
+}
+.style-button-turquoise:hover {
+  background-color: #379389;
+  color: #FFF;
+  text-decoration: none;
+}
+.button-submit {
+  background-color: #45b8ac;
   border: 0;
+  border-radius: 3px;
+  color: #FFF;
   font-size: 14px;
   padding: 10px 35px;
 }
 .button-submit:hover {
   background-color: #379389;
+  color: #FFF;
   text-decoration: none;
 }
 .btn-blue {
@@ -992,14 +1006,15 @@ body.modal-open {
 }
 .page-homepage .signup_box a.signup {
   background-color: #45b8ac;
+  border: 0;
   border-radius: 3px;
   color: #FFF;
-  display: inline-block;
   font-size: 18px;
   padding: 20px 80px;
 }
 .page-homepage .signup_box a.signup:hover {
   background-color: #379389;
+  color: #FFF;
   text-decoration: none;
 }
 .page-homepage .introduction {
@@ -1137,6 +1152,225 @@ body.modal-open {
 }
 .page-homepage .publications .right-publication {
   margin: 30px 0px 20px 0px;
+}
+.page-user-profile {
+  border-top: 6px solid #666;
+}
+.page-user-profile .container {
+  background-color: #FFF;
+}
+.page-user-profile .header .header-picture {
+  background: url(../images/sample/header.jpg) no-repeat;
+  height: 180px;
+  margin-bottom: 75px;
+  position: relative;
+}
+.page-user-profile .header .header-picture .avatar {
+  background-color: #FFF;
+  border-radius: 100px;
+  height: 100px;
+  left: 39px;
+  margin: 0px auto 0px;
+  padding: 6px;
+  position: absolute;
+  top: 140px;
+  width: 100px;
+}
+.page-user-profile .header .header-picture .avatar img {
+  border-radius: 100px;
+}
+.page-user-profile .header .header-picture h1 {
+  color: #444;
+  font-family: 'UthongBold', serif;
+  font-size: 40px;
+  font-weight: normal;
+  left: 190px;
+  line-height: normal;
+  margin: 0px;
+  position: absolute;
+  top: 200px;
+}
+.page-user-profile .header .header-picture .actions {
+  right: 0px;
+  position: absolute;
+  top: 200px;
+}
+.page-user-profile .header-right {
+  margin-left: 190px;
+}
+.page-user-profile .header-right .bio {
+  color: #666;
+  font-size: 16px;
+  line-height: 30px;
+}
+.page-user-profile .header-right .website {
+  margin: 10px 0px 0px 0px;
+}
+.page-user-profile .header-right .website a {
+  font-weight: bold;
+}
+.page-user-profile .header-right .website a:link,
+.page-user-profile .header-right .website a:active,
+.page-user-profile .header-right .website a:visited {
+  color: #3a7dbf;
+  text-decoration: underline;
+}
+.page-user-profile .header-right .website a:hover {
+  background-color: #3a7dbf;
+  color: #FFF;
+  text-shadow: none;
+}
+.page-user-profile .networks {
+  float: left;
+  margin-top: 10px;
+}
+.page-user-profile .networks .network {
+  margin-bottom: 10px;
+  text-align: center;
+  width: 190px;
+}
+.page-user-profile .networks a {
+  display: inline-block;
+  height: 32px;
+  text-indent: -9999px;
+  width: 32px;
+}
+.page-user-profile .networks a.facebook {
+  background: url(../images/ui/socials.png) 0px 0px;
+}
+.page-user-profile .networks a.facebook:hover {
+  background-position: 0px -32px;
+}
+.page-user-profile .networks a.twitter {
+  background: url(../images/ui/socials.png) -32px 0px;
+}
+.page-user-profile .networks a.twitter:hover {
+  background-position: -32px -32px;
+}
+.page-user-profile .publications {
+  background-color: #FFF;
+  margin-top: 50px;
+}
+.page-user-profile .publications h2 {
+  background: url(../images/accounts/publications.png) left center no-repeat;
+  color: #555;
+  font-family: 'QuarkLight', serif;
+  font-size: 34px;
+  font-weight: normal;
+  padding: 4px 0px 0px 35px;
+}
+.page-user-profile .publications .left-publication {
+  margin: 0px 40px 30px 0px;
+}
+.page-user-profile .publications .right-publication {
+  margin: 0px 0px 30px 0px;
+}
+.page-user-profile .publications li.publication {
+  background-color: #F7F7F7;
+  border-bottom: 5px solid #a1dcd6;
+  float: left;
+  list-style: none;
+  width: 450px;
+}
+.page-user-profile .publications li.publication .body {
+  padding: 25px 15px 15px;
+}
+.page-user-profile .publications li.publication .title a {
+  color: #444;
+  font-family: 'UthongBold';
+  font-size: 30px;
+  font-weight: normal;
+}
+.page-user-profile .publications li.publication .categories {
+  margin: 10px 0px;
+}
+.page-user-profile .publications li.publication .categories li {
+  list-style: none;
+}
+.page-user-profile .publications li.publication .categories li a {
+  color: #379389;
+  font-size: 13px;
+  font-style: italic;
+}
+.page-user-profile .publications li.publication .cover {
+  float: right;
+  width: 140px;
+  margin-top: 4px;
+}
+.page-user-profile .publications li.publication .cover img {
+  padding: 1px;
+  border: 1px solid #CCC;
+}
+.page-user-profile .publications li.publication .description {
+  color: #555;
+  font-size: 14px;
+  line-height: 23px;
+  margin-right: 150px;
+}
+.page-user-profile .publications li.publication .author {
+  margin-top: 20px;
+}
+.page-user-profile .publications li.publication .author .avatar {
+  background-color: #FFF;
+  border: 2px solid #888;
+  border-radius: 100px;
+  display: inline-block;
+  padding: 2px;
+  height: 45px;
+  margin-right: 10px;
+  vertical-align: middle;
+  width: 45px;
+}
+.page-user-profile .publications li.publication .author .avatar img {
+  border-radius: 45px;
+}
+.page-user-profile .publications li.publication .author .name {
+  display: inline-block;
+  vertical-align: middle;
+}
+.page-user-profile .publications li.publication .author .name .by {
+  color: #888;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.page-user-profile .publications li.publication .author .name a {
+  color: #444;
+  font-family: 'UthongRegular';
+  font-size: 24px;
+}
+.page-user-profile .publications li.publication .footer {
+  border-top: 1px solid #EAEAEA;
+}
+.page-user-profile .publications li.publication .footer .downloaded {
+  padding: 10px 15px;
+}
+.page-user-profile .publications li.publication .footer .downloaded em {
+  color: #444;
+  font-size: 18px;
+  font-weight: bold;
+}
+.page-user-profile .publications li.publication .footer .downloaded em i {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+}
+.page-user-profile .publications li.publication .footer .downloaded span {
+  color: #777;
+  display: block;
+  font-size: 13px;
+  margin-top: 3px;
+}
+.page-user-profile .publications li.publication .footer .buy {
+  float: right;
+  padding: 12px 15px;
+}
+.page-user-profile .publications li.publication .footer .buy .price {
+  color: #C30;
+  display: inline-block;
+  font-family: 'QuarkLight', sans-serif;
+  font-size: 20px;
+  margin-right: 10px;
+  vertical-align: -3px;
 }
 .page-user-base .style-page-navigation li.writeroom {
   background-image: url(../images/nav/nav-writeroom.png);

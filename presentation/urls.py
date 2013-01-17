@@ -7,6 +7,12 @@ urlpatterns = patterns(
 )
 
 urlpatterns += patterns(
+    'presentation.views.publication_views',
+
+    url(r'^publication/view/$', 'view_sample_publication', name='view_sample_publication'),
+)
+
+urlpatterns += patterns(
     'presentation.views.user_views',
 
     url(r'^profile/id/(?P<user_uid>\w+)/$', 'view_user_profile_by_id', name='view_user_profile_by_id'),

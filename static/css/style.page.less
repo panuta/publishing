@@ -230,7 +230,266 @@
     }
 }
 
-// ACCOUNTS ############################################################################################################
+// USERS ############################################################################################################
+
+.page-user-profile {
+    border-top: 6px solid #666;
+
+    .container {
+        background-color: #FFF;
+    }
+
+    .header {
+        .header-picture {
+            background: url(../images/sample/header.jpg) no-repeat;
+            height: 180px;
+            margin-bottom: 75px;
+            position: relative;
+
+            .avatar {
+                background-color: #FFF;
+                border-radius: 100px;
+                height: 100px;
+                left: 39px;
+                margin: 0px auto 0px;
+                padding: 6px;
+                position: absolute;
+                top: 140px;
+                width: 100px;
+
+                img {
+                    border-radius: 100px;
+                }
+            }
+
+            h1 {
+                color: #444;
+                font-family: 'UthongBold', serif;
+                font-size: 40px;
+                font-weight: normal;
+                left: 190px;
+                line-height: normal;
+                margin: 0px;
+                position: absolute;
+                top: 200px;
+            }
+
+            .actions {
+                right: 0px;
+                position: absolute;
+                top: 200px;
+            }
+        }
+    }
+
+    .header-right {
+        margin-left: 190px;
+
+        .bio {
+            color: #666;
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        .website {
+            margin: 10px 0px 0px 0px;
+
+            a {
+                .content_link;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .networks {
+        float: left;
+        margin-top: 10px;
+
+        .network {
+            margin-bottom: 10px;
+            text-align: center;
+            width: 190px;
+        }
+
+        a {
+            display: inline-block;
+            height: 32px;
+            text-indent: -9999px;
+            width: 32px;
+
+            &.facebook {
+                background: url(../images/ui/socials.png) 0px 0px;
+            }
+
+            &.facebook:hover {
+                background-position: 0px -32px;
+            }
+
+            &.twitter {
+                background: url(../images/ui/socials.png) -32px 0px;
+            }
+
+            &.twitter:hover {
+                background-position: -32px -32px;
+            }
+        }
+    }
+
+    .publications {
+        background-color: #FFF;
+        margin-top: 50px;
+
+        h2 {
+            background: url(../images/accounts/publications.png) left center no-repeat;
+            color: #555;
+            font-family: 'QuarkLight', serif;
+            font-size: 34px;
+            font-weight: normal;
+            padding: 4px 0px 0px 35px;
+
+        }
+
+        .left-publication {
+            margin: 0px 40px 30px 0px;
+        }
+
+        .right-publication {
+            margin: 0px 0px 30px 0px;
+        }
+
+        li.publication {
+            background-color: #F7F7F7;
+            border-bottom: 5px solid #a1dcd6;
+            float: left;
+            list-style: none;
+            width: 450px;
+
+            .body {
+                padding: 25px 15px 15px;
+            }
+
+            .title {
+                a {
+                    color: #444;
+                    font-family: 'UthongBold';
+                    font-size: 30px;
+                    font-weight: normal;
+                }
+            }
+
+            .categories {
+                margin: 10px 0px;
+
+                li {
+                    list-style: none;
+
+                    a {
+                        color: #379389;
+                        font-size: 13px;
+                        font-style: italic;
+                    }
+                }
+            }
+
+            .cover {
+                float: right;
+                width: 140px;
+                margin-top: 4px;
+
+                img {
+                    padding: 1px;
+                    border: 1px solid #CCC;
+                }
+            }
+
+            .description {
+                color: #555;
+                font-size: 14px;
+                line-height: 23px;
+                margin-right: 150px;
+            }
+
+            .author {
+                margin-top:20px;
+
+                .avatar {
+                    background-color: #FFF;
+                    border: 2px solid #888;
+                    border-radius: 100px;
+                    display: inline-block;
+                    padding: 2px;
+                    height: 45px;
+                    margin-right: 10px;
+                    vertical-align: middle;
+                    width: 45px;
+
+                    img {
+                        border-radius: 45px;
+                    }
+                }
+
+                .name {
+                    display: inline-block;
+                    vertical-align: middle;
+
+                    .by {
+                        color: #888;
+                        font-size: 12px;
+                        margin-bottom: 5px;
+                    }
+
+                    a {
+                        color: #444;
+                        font-family: 'UthongRegular';
+                        font-size: 24px;
+                    }
+                }
+            }
+
+            .footer {
+                border-top: 1px solid #EAEAEA;
+
+                .downloaded {
+                    padding: 10px 15px;
+
+                    em {
+                        color: #444;
+                        font-size: 18px;
+                        font-weight: bold;
+
+                        i {
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: normal;
+                        }
+                    }
+
+                    span {
+                        color: #777;
+                        display: block;
+                        font-size: 13px;
+                        margin-top: 3px;
+                    }
+                }
+
+                .buy {
+                    float: right;
+                    padding: 12px 15px;
+
+                    .price {
+                        color: #C30;
+                        display: inline-block;
+                        font-family: 'QuarkLight', sans-serif;
+                        font-size: 20px;
+                        margin-right: 10px;
+                        vertical-align: -3px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 .page-user-base {
     .style-page-navigation {
@@ -250,8 +509,6 @@
             background-image: url(../images/nav/nav-settings.png);
         }
     }
-
-
 }
 
 // USER WRITEROOM ######################################################################################################

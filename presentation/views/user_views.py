@@ -25,5 +25,5 @@ def view_user_profile_by_url_name(request, url_name):
 
 def _view_user_profile(request, user):
     #publications = Publication.objects.filter(created_by=user)
-    #return render(request, 'accounts/profile.html', {'profile_user':user, 'publications':publications})
-    return render(request, 'accounts/profile.html', {'profile_user':user, })
+    #return render(request, 'accounts/user_profile.html', {'profile_user':user, 'publications':publications})
+    return render(request, 'user/user_profile.html', {'profile_user':user, })

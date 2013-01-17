@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load presentation_tags %}
+
+{% block html_head %}
+<script type="text/javascript">
+$(document).ready(function() {
+
+});
+</script>
+{% endblock %}
+
+{% block body_content %}
+<div class="page-user-profile">
+    <div class="container">
+        <div class="header">
+            <div class="header-picture">
+                <div class="avatar"><img src="{{ STATIC_URL }}images/sample/avatars/my.jpg" /></div>
+                <h1>{{ profile_user.name }}</h1>
+                <div class="actions"><a href="#" class="style-button-turquoise"><i class="icon-envelope icon-white"></i> ติดตามผลงาน</a></div>
+            </div>
+
+            <div class="clearfix">
+                {% if profile_user.facebook_url or profile_user.twitter_url %}
+                    <div class="networks">
+                        {% if profile_user.facebook_url %}<div class="network"><a href="{{ profile_user.facebook_url }}" class="facebook">Facebook</a></div>{% endif %}
+                        {% if profile_user.twitter_url %}<div class="network"><a href="{{ profile_user.twitter_url }}" class="twitter">Twitter</a></div>{% endif %}
+                    </div>
+                {% endif %}
+                <div class="header-right">
+                    {% if profile_user.bio %}<div class="bio">{{ profile_user.bio }}</div>{% endif %}
+                    {% if profile_user.website_url %}<div class="website"><a href="{{ profile_user.website_url }}">{{ profile_user.website_url }}</a></div>{% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="publications">
+            <h2>งานเขียน</h2>
+            <ul class="clearfix">
+
+                <li class="publication left-publication">
+                    <div class="body">
+                        <div class="title"><a href="{% url 'view_sample_publication' %}">ความสามารถในการตั้งชื่อ</a></div>
+                        <div class="categories"><ul><li><a href="#">นวนิยาย</a></li></ul></div>
+                        <div class="clearfix">
+                            <div class="cover"><a href="{% url 'view_sample_publication' %}"><img src="{{ STATIC_URL }}images/sample/covers/cover3.jpg"/></a></div>
+                            <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu sapien sem, tempus rutrum urna. In auctor, justo eu feugiat tempor, erat est adipiscing lacus, ut faucibus lectus ligula eu arcu.</div>
+                        </div>
+                        <div class="author">
+                            <div class="avatar"><a href="#"><img src="{{ STATIC_URL }}images/sample/avatars/my.jpg" /></a></div>
+                            <div class="name">
+                                <div class="by">ประพันธ์โดย</div>
+                                <a href="#">ภาณุ ตั้งเฉลิมกุล</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="footer">
+                        <div class="buy">
+                            <span class="price">100 บาท</span>
+                            <a href="#" class="style-button-turquoise"><i class="icon-shopping-cart icon-white"></i> ซื้อหนังสือ</a>
+                        </div>
+                        <div class="downloaded"><em>100 <i>คน</i></em><span>แนะนำหนังสือเล่มนี้</span></div>
+                    </div>
+                </li>
+
+                <li class="publication right-publication">
+                    <div class="body">
+                        <div class="title"><a href="{% url 'view_sample_publication' %}">ความสามารถในการตั้งชื่อ</a></div>
+                        <div class="categories"><ul><li><a href="#">นวนิยาย</a></li></ul></div>
+                        <div class="clearfix">
+                            <div class="cover"><a href="{% url 'view_sample_publication' %}"><img src="{{ STATIC_URL }}images/sample/covers/cover3.jpg"/></a></div>
+                            <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu sapien sem, tempus rutrum urna. In auctor, justo eu feugiat tempor, erat est adipiscing lacus, ut faucibus lectus ligula eu arcu.</div>
+                        </div>
+                        <div class="author">
+                            <div class="avatar"><a href="#"><img src="{{ STATIC_URL }}images/sample/avatars/my.jpg" /></a></div>
+                            <div class="name">
+                                <div class="by">ประพันธ์โดย</div>
+                                <a href="#">ภาณุ ตั้งเฉลิมกุล</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="footer">
+                        <div class="actions"><a href="#" class="style-button-turquoise"><i class="icon-shopping-cart icon-white"></i> ซื้อหนังสือ</a></div>
+                        <div class="downloaded"><em>100 <i>คน</i></em><span>แนะนำหนังสือเล่มนี้</span></div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+
+
+    </div>
+</div>
+{% endblock %}
