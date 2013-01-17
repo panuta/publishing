@@ -1153,15 +1153,13 @@ body.modal-open {
 .page-homepage .publications .right-publication {
   margin: 30px 0px 20px 0px;
 }
-.page-user-profile {
-  border-top: 6px solid #666;
-}
 .page-user-profile .container {
   background-color: #FFF;
 }
 .page-user-profile .header .header-picture {
   background: url(../images/sample/header.jpg) no-repeat;
   height: 180px;
+  margin-top: 20px;
   margin-bottom: 75px;
   position: relative;
 }
@@ -1992,18 +1990,18 @@ body.modal-open {
 .page-profile .publications .right-publication {
   margin: 0px 0px 30px 0px;
 }
-.page-publication-view .row {
+.page-publication-view1 .row {
   margin-top: 30px;
 }
-.page-publication-view .publication {
+.page-publication-view1 .publication {
   background-color: #FDFDFD;
   border-radius: 3px;
   box-shadow: 0px 0px 2px #BBB;
 }
-.page-publication-view .publication .publication-header {
+.page-publication-view1 .publication .publication-header {
   padding: 15px 20px 25px;
 }
-.page-publication-view .publication .publication-header .avatar {
+.page-publication-view1 .publication .publication-header .avatar {
   background-color: #FFF;
   border: 2px solid #666;
   border-radius: 45px;
@@ -2013,53 +2011,53 @@ body.modal-open {
   height: 45px;
   width: 45px;
 }
-.page-publication-view .publication .publication-header .avatar img {
+.page-publication-view1 .publication .publication-header .avatar img {
   border-radius: 45px;
 }
-.page-publication-view .publication .publication-header .right {
+.page-publication-view1 .publication .publication-header .right {
   margin-left: 65px;
 }
-.page-publication-view .publication .publication-header .name {
+.page-publication-view1 .publication .publication-header .name {
   margin-top: 4px;
 }
-.page-publication-view .publication .publication-header .name a {
+.page-publication-view1 .publication .publication-header .name a {
   color: #777;
   font-size: 1.2em;
 }
-.page-publication-view .publication .publication-header .title {
+.page-publication-view1 .publication .publication-header .title {
   color: #5b5353;
   font-family: 'UthongBold', serif;
   font-size: 2.6em;
   margin-top: 20px;
 }
-.page-publication-view .publication .publication-body {
+.page-publication-view1 .publication .publication-body {
   padding: 0px 20px 20px;
 }
-.page-publication-view .publication .publication-body .cover {
+.page-publication-view1 .publication .publication-body .cover {
   float: right;
   width: 170px;
   margin-top: 4px;
 }
-.page-publication-view .publication .publication-body .cover img {
+.page-publication-view1 .publication .publication-body .cover img {
   padding: 2px;
   border: 1px solid #DDD;
   border-radius: 8px;
 }
-.page-publication-view .publication .publication-body .subtitle {
+.page-publication-view1 .publication .publication-body .subtitle {
   color: #666;
   font-family: 'ChiangSaenRegular', sans-serif;
   font-size: 1.8em;
   line-height: 33px;
   margin-right: 190px;
 }
-.page-publication-view .publication .publication-body .categories {
+.page-publication-view1 .publication .publication-body .categories {
   margin-top: 30px;
 }
-.page-publication-view .publication .publication-body .categories li {
+.page-publication-view1 .publication .publication-body .categories li {
   display: inline-block;
   list-style: none;
 }
-.page-publication-view .publication .publication-body .categories li a {
+.page-publication-view1 .publication .publication-body .categories li a {
   background-color: #F7F7F7;
   border: 1px solid #DDD;
   border-radius: 3px;
@@ -2071,166 +2069,166 @@ body.modal-open {
   margin-right: 8px;
   padding: 3px 20px;
 }
-.page-publication-view .publication .publication-body .categories li a:hover {
+.page-publication-view1 .publication .publication-body .categories li a:hover {
   background-color: #007a8d;
   border: 1px solid #007a8d;
   box-shadow: 1px 1px 0px #999;
   color: #FFF;
   text-decoration: none;
 }
-.page-publication-view .publication .publication-actions {
+.page-publication-view1 .publication .publication-actions {
   background-color: #F9F9F9;
   border-top: 1px solid #DDD;
   padding: 15px 20px;
   text-align: right;
 }
-.page-publication-view .publication .publication-actions a.link:link,
-.page-publication-view .publication .publication-actions a.link:active,
-.page-publication-view .publication .publication-actions a.link:visited {
+.page-publication-view1 .publication .publication-actions a.link:link,
+.page-publication-view1 .publication .publication-actions a.link:active,
+.page-publication-view1 .publication .publication-actions a.link:visited {
   color: #3a7dbf;
   text-decoration: underline;
 }
-.page-publication-view .publication .publication-actions a.link:hover {
+.page-publication-view1 .publication .publication-actions a.link:hover {
   background-color: #3a7dbf;
   color: #FFF;
   text-shadow: none;
 }
-.page-publication-view .publication .publication-actions .btn {
+.page-publication-view1 .publication .publication-actions .btn {
   margin-left: 10px;
   vertical-align: middle;
 }
-.page-publication-view .publication .publication-actions .btn-group {
+.page-publication-view1 .publication .publication-actions .btn-group {
   display: inline-block;
   text-align: left;
 }
-.page-publication-view .publication .publication-actions .recommends {
+.page-publication-view1 .publication .publication-actions .recommends {
   float: left;
 }
-.page-publication-view .publication .publication-actions .recommends .number {
+.page-publication-view1 .publication .publication-actions .recommends .number {
   color: #444;
   font-weight: bold;
 }
-.page-publication-view .publication .publication-actions .recommends .friends {
+.page-publication-view1 .publication .publication-actions .recommends .friends {
   margin-top: 7px;
 }
-.page-publication-view .publication .publication-actions .recommends .friends a {
+.page-publication-view1 .publication .publication-actions .recommends .friends a {
   display: block;
   float: left;
   margin-right: 4px;
 }
-.page-publication-view .publication .publication-actions .recommends .friends a img {
+.page-publication-view1 .publication .publication-actions .recommends .friends a img {
   height: 30px;
   width: 30px;
 }
-.page-publication-view .publication .publication-actions .lastread {
+.page-publication-view1 .publication .publication-actions .lastread {
   color: #777;
   margin-top: 9px;
 }
-.page-publication-view .publication .publication-actions .lastread em {
+.page-publication-view1 .publication .publication-actions .lastread em {
   font-weight: bold;
 }
-.page-publication-view .publication .publication-actions .not-login {
+.page-publication-view1 .publication .publication-actions .not-login {
   color: #444;
   font-size: 1.2em;
   vertical-align: middle;
 }
-.page-publication-view .publication .publication-actions .not-login a:link,
-.page-publication-view .publication .publication-actions .not-login a:active,
-.page-publication-view .publication .publication-actions .not-login a:visited {
+.page-publication-view1 .publication .publication-actions .not-login a:link,
+.page-publication-view1 .publication .publication-actions .not-login a:active,
+.page-publication-view1 .publication .publication-actions .not-login a:visited {
   color: #3a7dbf;
   text-decoration: underline;
 }
-.page-publication-view .publication .publication-actions .not-login a:hover {
+.page-publication-view1 .publication .publication-actions .not-login a:hover {
   background-color: #3a7dbf;
   color: #FFF;
   text-shadow: none;
 }
-.page-publication-view .publication .publication-social {
+.page-publication-view1 .publication .publication-social {
   border-top: 1px solid #DDD;
   padding: 15px 20px;
 }
-.page-publication-view .publication .publication-social .social .caption {
+.page-publication-view1 .publication .publication-social .social .caption {
   color: #666;
   font-size: 1em;
   font-weight: bold;
   float: left;
   margin-right: 15px;
 }
-.page-publication-view .publication .publication-social .social .caption em {
+.page-publication-view1 .publication .publication-social .social .caption em {
   color: #444;
   display: block;
   font-size: 1.3em;
 }
-.page-publication-view .publication .publication-social .social .sharing {
+.page-publication-view1 .publication .publication-social .social .sharing {
   float: left;
   margin-top: 3px;
 }
-.page-publication-view .publication .publication-social .social .sharing li {
+.page-publication-view1 .publication .publication-social .social .sharing li {
   display: block;
   float: left;
   list-style: none;
   margin-left: 7px;
 }
-.page-publication-view .publication .publication-social .social .sharing li a {
+.page-publication-view1 .publication .publication-social .social .sharing li a {
   background: url(../images/publication/socials.png) no-repeat;
   display: block;
   height: 32px;
   text-indent: -9999px;
   width: 32px;
 }
-.page-publication-view .publication .publication-social .social .sharing li.facebook a {
+.page-publication-view1 .publication .publication-social .social .sharing li.facebook a {
   background-position: 0px 0px;
 }
-.page-publication-view .publication .publication-social .social .sharing li.facebook a:hover {
+.page-publication-view1 .publication .publication-social .social .sharing li.facebook a:hover {
   background-position: 0px -32px;
 }
-.page-publication-view .publication .publication-social .social .sharing li.twitter a {
+.page-publication-view1 .publication .publication-social .social .sharing li.twitter a {
   background-position: -32px 0px;
 }
-.page-publication-view .publication .publication-social .social .sharing li.twitter a:hover {
+.page-publication-view1 .publication .publication-social .social .sharing li.twitter a:hover {
   background-position: -32px -32px;
 }
-.page-publication-view .publication .publication-social .social .sharing li.gplus a {
+.page-publication-view1 .publication .publication-social .social .sharing li.gplus a {
   background-position: -64px 0px;
 }
-.page-publication-view .publication .publication-social .social .sharing li.gplus a:hover {
+.page-publication-view1 .publication .publication-social .social .sharing li.gplus a:hover {
   background-position: -64px -32px;
 }
-.page-publication-view .publication .publication-social .permalink {
+.page-publication-view1 .publication .publication-social .permalink {
   margin-top: 6px;
   text-align: right;
 }
-.page-publication-view .publication .publication-social .permalink span {
+.page-publication-view1 .publication .publication-social .permalink span {
   color: #555;
   font-size: 0.9em;
   font-weight: bold;
   margin-right: 4px;
   vertical-align: middle;
 }
-.page-publication-view .publication .publication-social .permalink input {
+.page-publication-view1 .publication .publication-social .permalink input {
   font-size: 0.9em;
   height: 14px;
   margin: 0px;
   vertical-align: middle;
   width: 150px;
 }
-.page-publication-view .excerpt {
+.page-publication-view1 .excerpt {
   margin-top: 35px;
 }
-.page-publication-view .excerpt .caption {
+.page-publication-view1 .excerpt .caption {
   color: #666;
   font-family: 'ThaiSansLiteRegular', sans-serif;
   font-size: 2.4em;
   margin-bottom: 20px;
   text-shadow: 1px 1px 0px #FFF;
 }
-.page-publication-view .excerpt .excerpt-box {
+.page-publication-view1 .excerpt .excerpt-box {
   background: url(../images/publication/paper.png) #f7f7f7 repeat;
   border-radius: 3px;
   box-shadow: 0px 0px 2px #BBB;
   padding: 30px 0px;
 }
-.page-publication-view .excerpt .excerpt-box .content p {
+.page-publication-view1 .excerpt .excerpt-box .content p {
   color: #444;
   font-family: 'ChiangSaenRegular', sans-serif;
   font-size: 1.7em;
@@ -2238,18 +2236,18 @@ body.modal-open {
   margin: 0px 60px 15px;
   text-indent: 60px;
 }
-.page-publication-view .excerpt .excerpt-box .content p a:link,
-.page-publication-view .excerpt .excerpt-box .content p a:active,
-.page-publication-view .excerpt .excerpt-box .content p a:visited {
+.page-publication-view1 .excerpt .excerpt-box .content p a:link,
+.page-publication-view1 .excerpt .excerpt-box .content p a:active,
+.page-publication-view1 .excerpt .excerpt-box .content p a:visited {
   color: #3a7dbf;
   text-decoration: underline;
 }
-.page-publication-view .excerpt .excerpt-box .content p a:hover {
+.page-publication-view1 .excerpt .excerpt-box .content p a:hover {
   background-color: #3a7dbf;
   color: #FFF;
   text-shadow: none;
 }
-.page-publication-view .excerpt .excerpt-box .continue {
+.page-publication-view1 .excerpt .excerpt-box .continue {
   text-align: center;
 }
 .page-publication-read {
