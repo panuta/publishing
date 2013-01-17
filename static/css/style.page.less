@@ -92,9 +92,16 @@
     }
 
     .header {
+        background-color: #F4F4F4;
+        border-radius: 7px;
+        padding-bottom: 30px;
+        text-align: center;
+
         .header-picture {
             background: url(../images/sample/header.jpg) no-repeat;
             height: 180px;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
             margin-top: 20px;
             margin-bottom: 75px;
             position: relative;
@@ -103,7 +110,7 @@
                 background-color: #FFF;
                 border-radius: 100px;
                 height: 100px;
-                left: 39px;
+                left: 414px;
                 margin: 0px auto 0px;
                 padding: 6px;
                 position: absolute;
@@ -114,34 +121,23 @@
                     border-radius: 100px;
                 }
             }
-
-            h1 {
-                color: #444;
-                font-family: 'UthongBold', serif;
-                font-size: 40px;
-                font-weight: normal;
-                left: 190px;
-                line-height: normal;
-                margin: 0px;
-                position: absolute;
-                top: 200px;
-            }
-
-            .actions {
-                right: 0px;
-                position: absolute;
-                top: 200px;
-            }
         }
-    }
 
-    .header-right {
-        margin-left: 190px;
+        h1 {
+            color: #444;
+            font-family: 'UthongBold', serif;
+            font-size: 40px;
+            font-weight: normal;
+            line-height: normal;
+            margin: 0px;
+            padding-top: 10px;
+        }
 
         .bio {
-            color: #666;
+            color: #555;
             font-size: 16px;
             line-height: 30px;
+            padding: 0px 80px;
         }
 
         .website {
@@ -152,54 +148,56 @@
                 font-weight: bold;
             }
         }
-    }
 
-    .networks {
-        float: left;
-        margin-top: 10px;
+        .networks {
+            margin-top: 15px;
 
-        .network {
-            margin-bottom: 10px;
-            text-align: center;
-            width: 190px;
+            a {
+                display: inline-block;
+                height: 32px;
+                margin: 0px 5px;
+                text-indent: -9999px;
+                width: 32px;
+
+                &.facebook {
+                    background: url(../images/ui/socials.png) 0px 0px;
+                }
+
+                &.facebook:hover {
+                    background-position: 0px -32px;
+                }
+
+                &.twitter {
+                    background: url(../images/ui/socials.png) -32px 0px;
+                }
+
+                &.twitter:hover {
+                    background-position: -32px -32px;
+                }
+            }
         }
 
-        a {
-            display: inline-block;
-            height: 32px;
-            text-indent: -9999px;
-            width: 32px;
-
-            &.facebook {
-                background: url(../images/ui/socials.png) 0px 0px;
-            }
-
-            &.facebook:hover {
-                background-position: 0px -32px;
-            }
-
-            &.twitter {
-                background: url(../images/ui/socials.png) -32px 0px;
-            }
-
-            &.twitter:hover {
-                background-position: -32px -32px;
-            }
+        .actions {
+            margin-top: 20px;
         }
     }
 
     .publications {
-        background-color: #FFF;
-        margin-top: 50px;
+        margin-top: 30px;
 
-        h2 {
-            background: url(../images/accounts/publications.png) left center no-repeat;
-            color: #555;
-            font-family: 'QuarkLight', serif;
-            font-size: 34px;
-            font-weight: normal;
-            padding: 4px 0px 0px 35px;
+        .publications-head {
+            margin-bottom: 10px;
+            text-align: center;
 
+            h2 {
+                background: url(../images/accounts/publications.png) left center no-repeat;
+                color: #555;
+                display: inline-block;
+                font-family: 'QuarkLight', serif;
+                font-size: 34px;
+                font-weight: normal;
+                padding-left: 35px;
+            }
         }
 
         .left-publication {
@@ -211,7 +209,7 @@
         }
 
         li.publication {
-            background-color: #F7F7F7;
+            background-color: #F4F4F4;
             border-bottom: 5px solid #a1dcd6;
             float: left;
             list-style: none;
