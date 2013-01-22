@@ -1170,10 +1170,6 @@ body.modal-open {
 .page-user-writeroom .block-list li.publication .details .actions .button-more span {
   margin-top: 9px;
 }
-.page-user-writeroom-edit .writing-header {
-  border-bottom: 1px solid #DDD;
-  padding-bottom: 10px;
-}
 .page-user-writeroom-edit .writing-header h1 {
   color: #444;
   font-size: 22px;
@@ -1197,59 +1193,219 @@ body.modal-open {
   text-align: right;
 }
 .page-user-writeroom-edit .writing-nav {
-  padding-top: 10px;
-  float: left;
-  margin-left: 20px;
-  min-height: 1px;
-  width: 100px;
+  margin-bottom: 20px;
 }
 .page-user-writeroom-edit .writing-nav li {
+  float: left;
   list-style: none;
-  margin-bottom: 10px;
 }
 .page-user-writeroom-edit .writing-nav li a {
   background: url(../images/writing/steps.png) #eeeeee no-repeat;
   color: #555;
   display: block;
-  font-weight: bold;
-  height: 30px;
-  padding-top: 50px;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 10px;
+  padding: 0px 20px 0px 51px;
+  position: relative;
   text-align: center;
-  width: 100px;
 }
-.page-user-writeroom-edit .writing-nav li a.one {
-  background-position: center 10px;
+.page-user-writeroom-edit .writing-nav li a.outline {
+  background-position: 20px 7px;
 }
-.page-user-writeroom-edit .writing-nav li a.two {
-  background-position: center -190px;
+.page-user-writeroom-edit .writing-nav li a.book {
+  background-position: 20px -93px;
 }
-.page-user-writeroom-edit .writing-nav li a.three {
-  background-position: center -390px;
+.page-user-writeroom-edit .writing-nav li a.finalize {
+  background-position: 20px -193px;
 }
-.page-user-writeroom-edit .writing-nav li a.four {
-  background-position: center -590px;
-}
-.page-user-writeroom-edit .writing-nav li.active a {
-  background-color: #dd7144;
+.page-user-writeroom-edit .writing-nav li.active a,
+.page-user-writeroom-edit .writing-nav li a:hover {
+  background-color: #777;
   color: #FFF;
+  text-decoration: none;
 }
-.page-user-writeroom-edit .writing-nav li.active a.one {
-  background-position: center -90px;
+.page-user-writeroom-edit .writing-nav li.active a.outline,
+.page-user-writeroom-edit .writing-nav li a:hover.outline {
+  background-position: 20px -43px;
 }
-.page-user-writeroom-edit .writing-nav li.active a.two {
-  background-position: center -290px;
+.page-user-writeroom-edit .writing-nav li.active a.book,
+.page-user-writeroom-edit .writing-nav li a:hover.book {
+  background-position: 20px -143px;
 }
-.page-user-writeroom-edit .writing-nav li.active a.three {
-  background-position: center -490px;
+.page-user-writeroom-edit .writing-nav li.active a.finalize,
+.page-user-writeroom-edit .writing-nav li a:hover.finalize {
+  background-position: 20px -243px;
 }
-.page-user-writeroom-edit .writing-nav li.active a.four {
-  background-position: center -690px;
+.page-user-writeroom-edit .writing-nav li.active a:after,
+.page-user-writeroom-edit .writing-nav li a:hover:after {
+  top: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
 }
-.page-user-writeroom-edit .writing-body {
-  float: left;
-  margin-left: 20px;
-  min-height: 1px;
-  width: 820px;
+.page-user-writeroom-edit .writing-nav li.active a:after,
+.page-user-writeroom-edit .writing-nav li a:hover:after {
+  border-color: rgba(119, 119, 119, 0);
+  border-top-color: #777;
+  border-width: 8px;
+  left: 50%;
+  margin-left: -8px;
+}
+.page-user-writeroom-edit .writing-nav .save-bar {
+  float: right;
+  margin-top: 4px;
+}
+.page-user-writeroom-edit .writing-nav .save-bar a.btn {
+  font-size: 12px;
+}
+.page-user-writeroom-edit .writing-nav .save-bar .button-save {
+  font-weight: bold;
+  width: 80px;
+}
+.page-user-writeroom-edit .writing-nav .save-bar .button-history {
+  margin-left: 5px;
+}
+.page-user-writeroom-edit .writing-nav .save-bar .button-settings {
+  margin-left: 5px;
+}
+.page-user-writeroom-edit .writing-nav .save-bar .save_notice {
+  color: #666;
+  font-size: 13px;
+  margin-right: 5px;
+}
+.page-user-writeroom-edit .writing-body .body-outline {
+  padding-top: 10px;
+}
+.page-user-writeroom-edit .writing-body .body-outline label {
+  color: #666;
+  font-size: 16px;
+  padding-bottom: 5px;
+}
+.page-user-writeroom-edit .writing-body .body-book .chapters-bar {
+  padding: 10px 0px 20px;
+}
+.page-user-writeroom-edit .writing-body .body-book .chapters-bar .structure {
+  margin-right: 15px;
+}
+.page-user-writeroom-edit .writing-body .body-book .chapters-bar .structure .btn {
+  font-size: 12px;
+}
+.page-user-writeroom-edit .writing-body .body-book .chapters-bar .chapters a {
+  font-size: 14px;
+}
+.page-user-writeroom-edit .writing-body .body-book .chapters-bar .chapters a:link,
+.page-user-writeroom-edit .writing-body .body-book .chapters-bar .chapters a:active,
+.page-user-writeroom-edit .writing-body .body-book .chapters-bar .chapters a:visited {
+  color: #3a7dbf;
+  text-decoration: underline;
+}
+.page-user-writeroom-edit .writing-body .body-book .chapters-bar .chapters a:hover {
+  background-color: #3a7dbf;
+  color: #FFF;
+  text-shadow: none;
+}
+.page-user-writeroom-edit .writing-body .body-book .chapters-bar .chapters em {
+  color: #444;
+  font-weight: bold;
+}
+.page-user-writeroom-edit .writing-body .body-book .chapters-bar .chapters .divider {
+  color: #CCC;
+  margin: 0px 8px;
+}
+.page-user-writeroom-edit .writing-body .body-book .content-container {
+  background-color: #F3F3F3;
+  padding: 40px 95px;
+}
+.page-user-writeroom-edit .writing-body .body-book .content-container .content {
+  background-color: #FCFCFC;
+  border-radius: 3px;
+  box-shadow: 0px 0px 2px #BBB;
+  margin: 0px auto;
+  padding: 50px 80px 40px;
+  width: 590px;
+}
+.page-user-writeroom-edit .writing-body .body-book .content-container .content .chapter-title {
+  color: #444;
+  font-family: 'UthongRegular', serif;
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.page-user-writeroom-edit .writing-body .body-book .content-container .content .redactor_box {
+  background-color: #FCFCFC;
+  border: none;
+  font-family: 'ChiangSaenRegular', sans-serif;
+}
+.page-user-writeroom-edit .writing-body .body-book .content-container .content .redactor_box .redactor_editor,
+.page-user-writeroom-edit .writing-body .body-book .content-container .content .redactor_box .redactor_editor:focus {
+  background-color: #FCFCFC !important;
+  padding: 15px 0px !important;
+}
+.page-user-writeroom-edit .writing-body .body-book .content-container .content .redactor_box textarea {
+  background-color: #FCFCFC;
+}
+.page-user-writeroom-edit .writing-body .body-book .content-container .content p {
+  color: #444;
+  font-family: 'ChiangSaenRegular', sans-serif;
+  font-size: 23px;
+  line-height: 30px;
+}
+.page-user-writeroom-edit .writing-body .body-book .content-container .content p a:link,
+.page-user-writeroom-edit .writing-body .body-book .content-container .content p a:active,
+.page-user-writeroom-edit .writing-body .body-book .content-container .content p a:visited {
+  color: #3a7dbf;
+  text-decoration: underline;
+}
+.page-user-writeroom-edit .writing-body .body-book .content-container .content p a:hover {
+  background-color: #3a7dbf;
+  color: #FFF;
+  text-shadow: none;
+}
+.page-user-writeroom-edit .writing-body .body-finalize {
+  padding-top: 10px;
+}
+.page-user-writeroom-edit .writing-body .body-finalize ol {
+  margin: 0px;
+}
+.page-user-writeroom-edit .writing-body .body-finalize ol li.finalize-item {
+  list-style: none;
+}
+.page-user-writeroom-edit .writing-body .body-finalize ol li.finalize-item .title {
+  background: url(../images/writing/steps_number.png) no-repeat;
+  color: #555;
+  font-size: 18px;
+  height: 32px;
+  line-height: 32px;
+  margin-bottom: 15px;
+  padding-left: 40px;
+}
+.page-user-writeroom-edit .writing-body .body-finalize ol li.finalize-item.finalize-editor .title {
+  background-position: 0px 0px;
+}
+.page-user-writeroom-edit .writing-body .body-finalize ol li.finalize-item.finalize-cover .title {
+  background-position: 0px -200px;
+}
+.page-user-writeroom-edit .writing-body .body-finalize ol li.finalize-item.finalize-publishing .title {
+  background-position: 0px -400px;
+}
+.page-user-writeroom-edit .writing-body .body-finalize ol li.finalize-item .finalize-content {
+  margin: 0px 0px 30px 40px;
+}
+.page-user-writeroom-edit .writing-body .body-finalize ol li.finalize-editor ul {
+  margin: 0px 0px 15px 20px;
+}
+.page-user-writeroom-edit .writing-body .body-finalize ol li.finalize-editor li {
+  color: #444;
+  font-size: 14px;
+  list-style: disc;
+  margin-bottom: 10px;
+}
+.page-user-writeroom-edit .writing-body .body-finalize ol li.finalize-editor .button-editor {
+  font-size: 13px;
 }
 .page-user-settings {
   margin-top: 20px;

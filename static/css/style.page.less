@@ -498,9 +498,6 @@
 
 .page-user-writeroom-edit {
     .writing-header {
-        border-bottom: 1px solid #DDD;
-        padding-bottom: 10px;
-
         h1 {
             color: #444;
             font-size: 22px;
@@ -529,74 +526,249 @@
         }
     }
 
+
+
     .writing-nav {
-        padding-top: 10px;
-        float: left;
-        margin-left: 20px;
-        min-height: 1px;
-        width: 100px;
+        margin-bottom: 20px;
 
         li {
+            float: left;
             list-style: none;
-            margin-bottom: 10px;
 
             a {
                 background: url(../images/writing/steps.png) #EEE no-repeat;
                 color: #555;
                 display: block;
-                font-weight: bold;
-                height: 30px;
-                padding-top: 50px;
+                height: 40px;
+                line-height: 40px;
+                margin-right: 10px;
+                padding: 0px 20px 0px 51px;
+                position: relative;
                 text-align: center;
-                width: 100px;
 
-                &.one {
-                    background-position: center 10px;
+                &.outline {
+                    background-position: 20px 7px;
                 }
 
-                &.two {
-                    background-position: center -190px;
+                &.book {
+                    background-position: 20px -93px;
                 }
 
-                &.three {
-                    background-position: center -390px;
-                }
-
-                &.four {
-                    background-position: center -590px;
+                &.finalize {
+                    background-position: 20px -193px;
                 }
             }
 
-            &.active {
-                a {
-                    background-color: @color_orange;
-                    color: #FFF;
+            &.active a, a:hover {
+                background-color: #777;
+                color: #FFF;
+                text-decoration: none;
 
-                    &.one {
-                        background-position: center -90px;
-                    }
-
-                    &.two {
-                        background-position: center -290px;
-                    }
-
-                    &.three {
-                        background-position: center -490px;
-                    }
-
-                    &.four {
-                        background-position: center -690px;
-                    }
+                &.outline {
+                    background-position: 20px -43px;
                 }
+
+                &.book {
+                    background-position: 20px -143px;
+                }
+
+                &.finalize {
+                    background-position: 20px -243px;
+                }
+
+                &:after {
+                    top: 100%;
+                    border: solid transparent;
+                    content: " ";
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    pointer-events: none;
+                }
+
+                &:after {
+                    border-color: rgba(119, 119, 119, 0);
+                    border-top-color: #777;
+                    border-width: 8px;
+                    left: 50%;
+                    margin-left: -8px;
+                }
+            }
+        }
+
+        .save-bar {
+            float: right;
+            margin-top: 4px;
+
+            a.btn {
+                font-size: 12px;
+            }
+
+            .button-save {
+                font-weight: bold;
+                width: 80px;
+            }
+
+            .button-history {
+                margin-left: 5px;
+            }
+
+            .button-settings {
+                margin-left: 5px;
+            }
+
+            .save_notice {
+                color: #666;
+                font-size: 13px;
+                margin-right: 5px;
             }
         }
     }
 
     .writing-body {
-        float: left;
-        margin-left: 20px;
-        min-height: 1px;
-        width: 820px;
+        .body-outline {
+            padding-top: 10px;
+
+            label {
+                color: #666;
+                font-size: 16px;
+                padding-bottom: 5px;
+            }
+        }
+
+        .body-book {
+            .chapters-bar {
+                padding: 10px 0px 20px;
+
+                .structure {
+                    margin-right: 15px;
+
+                    .btn {
+                        font-size: 12px;
+                    }
+                }
+
+                .chapters {
+                    a {
+                        .content_link;
+                        font-size: 14px;
+                    }
+
+                    em {
+                        color: #444;
+                        font-weight: bold;
+                    }
+
+                    .divider {
+                        color: #CCC;
+                        margin: 0px 8px;
+                    }
+                }
+            }
+
+            .content-container {
+                background-color: #F3F3F3;
+                padding: 40px 95px;
+
+                .content {
+                    background-color: #FCFCFC;
+                    border-radius: 3px;
+                    box-shadow: 0px 0px 2px #BBB;
+                    margin: 0px auto;
+                    padding: 50px 80px 40px;
+                    width: 590px;
+
+                    .chapter-title {
+                        color: #444;
+                        font-family: 'UthongRegular', serif;
+                        font-size: 36px;
+                        margin-bottom: 30px;
+                        text-align: center;
+                    }
+
+                    .redactor_box {
+                        background-color: #FCFCFC;
+                        border: none;
+                        font-family: 'ChiangSaenRegular', sans-serif;
+
+                        .redactor_editor, .redactor_editor:focus {
+                            background-color: #FCFCFC !important;
+                            padding: 15px 0px !important;
+                        }
+
+                        textarea {
+                            background-color: #FCFCFC;
+                        }
+                    }
+
+                    p {
+                        color: #444;
+                        font-family: 'ChiangSaenRegular', sans-serif;
+                        font-size: 23px;
+                        line-height: 30px;
+
+                        a {
+                            .content_link;
+                        }
+                    }
+                }
+            }
+        }
+
+        .body-finalize {
+            padding-top: 10px;
+
+            ol {
+                margin: 0px;
+
+                li.finalize-item {
+                    list-style: none;
+
+                    .title {
+                        background: url(../images/writing/steps_number.png) no-repeat;
+                        color: #555;
+                        font-size: 18px;
+                        height: 32px;
+                        line-height: 32px;
+                        margin-bottom: 15px;
+                        padding-left: 40px;
+                    }
+
+                    &.finalize-editor .title {
+                        background-position: 0px 0px;
+                    }
+
+                    &.finalize-cover .title {
+                        background-position: 0px -200px;
+                    }
+
+                    &.finalize-publishing .title {
+                        background-position: 0px -400px;
+                    }
+
+                    .finalize-content {
+                        margin: 0px 0px 30px 40px;
+                    }
+                }
+
+                li.finalize-editor {
+                    ul {
+                        margin: 0px 0px 15px 20px;
+                    }
+
+                    li {
+                        color: #444;
+                        font-size: 14px;
+                        list-style: disc;
+                        margin-bottom: 10px;
+                    }
+
+                    .button-editor {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
     }
 }
 

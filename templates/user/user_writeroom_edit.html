@@ -1,9 +1,26 @@
 {% extends 'user/user_base.html' %}
 
 {% block html_head %}
+<link rel="stylesheet" href="{{ STATIC_URL }}libs/redactor/redactor.css" />
+<script src="{{ STATIC_URL }}libs/redactor/redactor.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
+    $('#outline-textarea').redactor({minHeight: 200});
+    $('#book-textarea').redactor({
+        minHeight: 200,
+        focus: true,
+        fixed: true,
+        fixedBox: true
+    });
 
+    $('.writing-nav a').on('click', function() {
+        $(this).closest('ul').find('li').removeClass('active');
+        $(this).closest('li').addClass('active');
+
+        $('.writing-body .body').hide();
+        $('.writing-body .body-' + $(this).attr('class')).show();
+        return false;
+    });
 });
 </script>
 {% endblock %}
@@ -23,22 +40,113 @@ $(document).ready(function() {
 <div class="page-user-writeroom-edit">
     <div class="container">
         <div class="writing-header">
-            <h1>(untitled)</h1>
-            <div class="status"><em class="draft">DRAFT</em></div>
-            <div class="actions"><a href="#" class="btn btn-small">Tools</a></div>
+            <h1>(ชื่อเรื่อง)</h1>
         </div>
-        <div class="row">
-            <div class="writing-nav">
-                <ul>
-                    <li class="active"><a href="#" class="one">Outline</a></li>
-                    <li><a href="#" class="two">Content</a></li>
-                    <li><a href="#" class="three">Finalize</a></li>
-                </ul>
+
+        <div class="writing-nav clearfix">
+            <ul>
+                <li class="active"><a href="#" class="outline">โครงเรื่อง</a></li>
+                <li><a href="#" class="book">เขียนหนังสือ</a></li>
+                <li><a href="#" class="finalize">เตรียมตีพิมพ์</a></li>
+            </ul>
+            <div class="save-bar">
+                <span class="save_notice">บันทึกเรียบร้อยเมื่อเวลา 18:00 น.</span>
+                <a href="#" class="btn button-save">บันทึกการแก้ไข</a>
+                <a href="#" class="btn button-history">ประวัติการแก้ไข <span class="caret"></span></a>
+                <a href="#" class="btn button-settings"><i class="icon-cog"></i></a>
             </div>
-            <div class="writing-body">
-                <div class="body-outline"></div>
-                <div class="body-content"></div>
-                <div class="body-finalize"></div>
+        </div>
+
+        <div class="writing-body">
+            <div class="body body-outline">
+                <label for="outline-textarea">เขียนสิ่งที่อยู่ในหัวออกมา</label>
+                <textarea id="outline-textarea"></textarea>
+            </div>
+            <div class="body body-book hide">
+                <div class="chapters-bar">
+                    <span class="structure"><a href="#" class="btn">โครงสร้างหนังสือ <span class="caret"></span></a></span>
+                    <span class="chapters">
+                        <em>คำนำ</em>
+                        <span class="divider">|</span>
+                        <a href="#">คำนิยม</a>
+                        <span class="divider">|</span>
+                        <a href="#">เนื้อเรื่อง</a>
+                        <span class="divider">|</span>
+                        <a href="#">บทส่งท้าย</a>
+                    </span>
+                </div>
+
+                <div class="content-container">
+                    <div class="content">
+                        <div class="chapter-title">คำนำ</div>
+                        <textarea id="book-textarea"></textarea>
+                    </div>
+                </div>
+
+<!--
+                <div class="content-container">
+                    <div class="content">
+                        <p>ซีนเซ็กซ์ลาเต้แพทยสภา งี้วาฟเฟิลวอลซ์ ใช้งานคอลัมน์ เกรย์ เปเปอร์ยูวีเทคโนซังเตเกรย์ วิภัชภาคพะเรอมั้ยเอ๋บอมบ์ราสเบอร์รี ปิยมิตร โคโยตีพาสปอร์ตเกย์อาว์ เยอร์บีราสติ๊กเกอร์ดีพาร์ตเมนท์ปาสกาล ไฮไลท์ พ่อค้าคลาสสิกโบกี้รวมมิตร กาญจน์ซูชิทิป สหัสวรรษซี้เรตติ้ง บูติก ยะเยือกวาฟเฟิลซี้สหรัฐเนิร์สเซอรี่ออร์เดอร์ แอคทีฟนพมาศพุทธภูมิแอสเตอร์โอวัลตินเวิร์ลด์</p>
+                        <p>ออเดอร์เอเซียโอยัวะดิสเครดิตชนะเลิศแจ็กพอต วิป ละอ่อนไตรมาส ซิตี้ตู้เซฟเทรดกุมภาพันธ์ เนิร์สเซอรี่ฟรุตโบรกเกอร์ฮาราคีรี โหลนต้าอ่วย เยลลี่สป็อต เอเซียแซ็กโซโฟนเอ็นทรานซ์โชห่วยรีทัชคอนแท็ค นายพรานแอนด์ เทวาธิราชแมกกาซีนพฤหัสไชน่า แคร็กเกอร์ฟีดสแควร์คาร์คอนเซปต์ บิลคาแร็คเตอร์คาร์โก้แอลมอนด์โคโยตี้โอเพ่น โชว์รูม ซัพพลายบิ๊กสตาร์ทเซ็นเซอร์แฟ้บเพรียวบาง แคนยอนซิลเวอร์ ฮาลาล</p>
+                        <p>ซากุระรีไทร์วอล์คนิวส์ไนท์ ไฮเปอร์เวิร์กช็อป ถูกต้องฟิวเจอร์ปัจฉิมนิเทศโปรเจกเตอร์ เนิร์สเซอรีโชว์รูมรามเทพม้งนพมาศ แฟลชวิวคอร์รัปชันเวเฟอร์อวอร์ด บัสเซอร์ไพรส์ นอร์ทสุริยยาตรคาวบอยแครกเกอร์ กรอบรูป ไทเฮาแจ็กเก็ตเห็นด้วยเย้ว ฮิปโป สะเด่าสเตชันอิ่มแปร้สเตย์ สกรัมเลสเบี้ยน ไรเฟิล โอเพ่นโปรเจ็คออทิสติกมาร์ช วินวอลล์เอ็นทรานซ์โชห่วยโคโยตี เจ็ตเซรามิกแพทยสภาพฤหัสสันทนาการก๊วน</p>
+                        <p>วีซ่าโยโย่แจ็กพอตแพนด้า เซ็นทรัลเอ็กซ์โป มอลล์โฮปซื่อบื้อหล่อฮังก้วยคำตอบฟาสต์ฟู้ด วาฟเฟิลช็อตเฮอร์ริเคนแอพพริคอทสะกอมโหงวเฮ้ง ฮอตดอกเลคเชอร์บราแป๋ว ซัพพลายเออร์แอปเปิ้ลโดมิโนแอ็คชั่นเพาเวอร์สปาย พูลนรีแพทย์มาร์เก็ตติ้งเอาท์ เอ็นเตอร์เทนป๊อปไมค์ ธัมโม ไอเดียลามะซังเต โปรเจกเตอร์ ป๊อปคอนเซปต์วอลล์สุริยยาตร รีเสิร์ชตะหงิดวืดแรงดูด โฟมแอปเปิ้ล แจมป๊อกมะกันชาร์ปคองเกรส เวณิกาลาตินแซ็กโซโฟนสคริปต์ซูฮก</p>
+                        <p>เดี้ยงซิมโฟนี่ ม้งเรตติ้งเธค วานิลลาคองเกรส เอ็กซ์เพรส บ๊วยบอยคอตต์สี่แยกซูชิซิมโฟนี่พริตตี้ แฟลชแซ็กโซโฟนว้อยลิมูซีนบุญคุณ ดีพาร์ตเมนท์โยโย่ จตุคามโปรเจกต์ คาร์โก้เบิร์ดสติกเกอร์ ซาตาน เจ็ต โปรเจกต์เอ็กซ์โปโปรโมชั่นสติ๊กเกอร์วีซ่าโอเพ่น นอมินี ครัวซองต์อวอร์ดราเม็งแคร็กเกอร์ซามูไร คอนเทนเนอร์คำสาปเชอร์รี่คอนแท็คดิกชันนารีแรงใจ เจไดตรวจทานทีวี</p>
+                    </div>
+                </div>-->
+            </div>
+            <div class="body body-finalize hide">
+                <ol>
+                    <li class="finalize-item finalize-editor">
+                        <div class="title">ตรวจพิสูจน์อักษร</div>
+                        <div class="finalize-content">
+                            <ul>
+                                <li>ปรับเนื้อหาให้มีความลื่นไหลมากขึ้น</li>
+                                <li>แก้ไขคำผิดหรือคำที่ใช้ไม่ถูกต้อง</li>
+                                <li>ทำให้หนังสือมีความสมบูรณ์</li>
+                            </ul>
+                            <a href="#" class="btn button-editor"><i class="icon-pencil"></i> ใช้บริการพิสูจน์อักษร</a>
+                        </div>
+                    </li>
+                    <li class="finalize-item finalize-cover">
+                        <div class="title">ปกหนังสือ</div>
+                        <div class="finalize-content">
+                            <form class="form">
+                                <label>อัพโหลดไฟล์ปกหนังสือ</label>
+                                <input type="file" />
+                            </form>
+                            <div>หรือ</div>
+                            <a href="#" class="btn button-editor"><i class="icon-picture"></i> ใช้บริการออกแบบปกหนังสือ</a>
+                        </div>
+                    </li>
+                    <li class="finalize-item finalize-publishing">
+                        <div class="title">ข้อมูลการตีพิมพ์</div>
+                        <div class="finalize-content">
+                            <form class="form">
+                                <div class="control-group">
+                                    <label class="control-label" for="id_booktype">ประเภทหนังสือ</label>
+                                    <div class="controls">
+                                        <select id="id_booktype"><option>นวนิยาย</option><option>สารคดี</option></select>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="id_price">คำบรรยายสั้นๆ</label>
+                                    <div class="controls">
+                                        <input type="text" id="id_price">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="id_price">ราคา</label>
+                                    <div class="controls">
+                                        <input type="text" id="id_price">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+
+
+                </ol>
+                <div class="confirm"><a href="#" class="style-button">ยืนยันการตีพิมพ์</a></div>
             </div>
         </div>
     </div>
